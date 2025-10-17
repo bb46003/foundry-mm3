@@ -30,6 +30,14 @@
                     </select>
                 </label>
             </div>
+            <div class="innerBlock accessibilityFont">
+                <label>
+                    <span>{{localize "MM3.THEME.label"}}</span>
+                    <select name="system.theme">
+                        {{selectOptions (listtheme) selected=systemData.theme localize=true}}
+                    </select>
+                </label>
+            </div>
         </div>
 
         {{#if (isOwner this)}}

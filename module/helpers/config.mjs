@@ -377,3 +377,8 @@ MM3.StdAtk = {
     isAffliction:false,
     isDmg:false,
 };
+
+MM3.sheetTheme = {
+    "default" : "MM3.THEME.default",
+    "bule": "MM3.THEME.bule"
+}

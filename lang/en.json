@@ -452,6 +452,10 @@
     "EffetsPrincipaux":"Main Effects",
     "Cible":"Target",
     "SaveEdit":"Save changes",
-    "Annuler":"Undo"
+    "Annuler":"Undo",
+    "THEME":{
+      "default":"System default",
+      "bule": "Bule Theme"
+    }
   }
 }

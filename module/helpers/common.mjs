@@ -1902,6 +1902,15 @@ export function accessibility(actor, html) {
     $(html.find('nav.tabs a i')).remove();
     target.prepend(`<i class="fa-solid fa-hexagon-check"></i>`);
   });
+  const theme = actor.system.theme;
+  switch (theme){
+    case "default":
+      break
+    case "bule":
+      const heder = html[0].querySelector(".sheet-header");
+      heder.style.backgroundColor  = '#0022e088';
+      break
+  }
 }
 
 export async function deletePrompt(actor, label) {

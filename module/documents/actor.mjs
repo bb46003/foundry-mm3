@@ -52,7 +52,7 @@ export class MM3Actor extends Actor {
 
   prepareDerivedData() {
     const actorData = this;
-
+    console.log(actorData)
     actorData.system.accessibility = {
       font:actorData.system?.accessibility?.font ?? "",
       fontOther:actorData.system?.accessibility?.fontOther ?? "",

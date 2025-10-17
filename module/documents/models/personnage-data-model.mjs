@@ -219,6 +219,7 @@ export class PersonnageDataModel extends foundry.abstract.TypeDataModel {
                 }),
                 actuel:new NumberField({ initial: 0}),
             }),
+            theme: new StringField({ initial: ""}),
         };
 
 		return foundry.utils.mergeObject(data, base);

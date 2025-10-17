@@ -260,6 +260,9 @@ export const RegisterHandlebars = function () {
     Handlebars.registerHelper('listcarac', function() {
         return CONFIG.MM3.caracteristiquesshort;
     });
+        Handlebars.registerHelper('listtheme', function() {
+        return CONFIG.MM3.sheetTheme;
+    });
 
     Handlebars.registerHelper('listfont', function() {
         return foundry.utils.mergeObject({

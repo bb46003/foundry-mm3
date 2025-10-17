@@ -1903,13 +1903,14 @@ export function accessibility(actor, html) {
     target.prepend(`<i class="fa-solid fa-hexagon-check"></i>`);
   });
   const theme = actor.system.theme;
-  switch (theme){
-    case "default":
-      break
-    case "bule":
-      const heder = html[0].querySelector(".sheet-header");
-      heder.style.backgroundColor  = '#0022e088';
-      break
+  const element = html[0];
+  if(theme !== "default" || theme !== ""){
+    let heder = element.querySelector(".sheet-header") ;
+    switch (theme){
+      case "bule":     
+        heder.style.backgroundColor = '#0022e088';
+        break
+    }
   }
 }
 

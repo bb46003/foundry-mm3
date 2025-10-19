@@ -1922,7 +1922,7 @@ function applyTheme(element, theme) {
     const selectors = {
         app: element.querySelector(".window-content"),
         heder: element.querySelector(".sheet-header"),
-        hederInput: element.querySelectorAll(".sheet-header input"),
+        hederInput: element.querySelectorAll(".sheet-header input" + ".sheet-header span"),
         divBlock: element.querySelector(".sheet-header .block"),
         lPouvoirs: element.querySelector("div.pouvoirs div.lPouvoirs"),
         tabs: element.querySelectorAll("section.sheet-body nav.tabs a"),

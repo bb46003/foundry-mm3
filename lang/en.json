@@ -454,8 +454,10 @@
     "SaveEdit":"Save changes",
     "Annuler":"Undo",
     "THEME":{
+      "label": "Select your character sheet theme",
       "default":"System default",
-      "bule": "Bule Theme"
+      "green": "Emerald City",
+      "freedomcity": "Freedom City"
     }
   }
 }

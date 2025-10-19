@@ -50,7 +50,8 @@ import {
   setSpeed,
   processCharacterData,
   xml2json,
-  parseXML
+  parseXML,
+  itemTheme
 } from "./helpers/common.mjs";
 
 import { MigrationMM3 } from "./migration.mjs";
@@ -1115,7 +1116,9 @@ function convertExtras(power, simplePower){
 
 Hooks.on('deleteItem', doc => toggler.clearForId(doc.id));
 Hooks.on('deleteActor', doc => toggler.clearForId(doc.id));
-
+Hooks.on('renderItemSheet', (html) => {
+  itemTheme(html)
+});
 Hooks.on('renderChatMessage', (message, html, data) => {
   const isInitiative = message?.flags?.core?.initiativeRoll ?? false;
   const toHide = $(html.find('div.toHide'));

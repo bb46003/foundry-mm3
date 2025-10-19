@@ -380,5 +380,6 @@ MM3.StdAtk = {
 
 MM3.sheetTheme = {
     "default" : "MM3.THEME.default",
-    "bule": "MM3.THEME.bule"
+    "green": "MM3.THEME.green",
+    "freedomcity": "MM3.THEME.freedomcity"
 }

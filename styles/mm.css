@@ -21,6 +21,16 @@
 @import url("https://fonts.googleapis.com/css?family=Quantico&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Staatliches&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Secular+One&display=swap");
+
+
+@font-face {
+    font-family: 'Big Noodle Titling';
+    src: url('../assets/font/big_noodle_titling.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 div.personnage section.window-content {
   background: #EBEBEB;
   color: #363B44;
@@ -10581,4 +10591,276 @@ section#compendium > header:first-of-type:before {
   font-size: var(--font-size-28);
   font-weight: bold;
   pointer-events: all;
+}
+
+/* Only apply when window-content has 'green' class */
+.window-content.green {
+
+    /* App window */
+    color: white !important;
+    background-image: url('../assets/theme/darkgreennoise.webp') !important;
+    background-repeat: repeat !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Sheet header */
+.window-content.green .sheet-header,.window-content.green .mainName, .window-content.window-content.green .header.blue  {
+    background-color: #003200 !important;
+    background-blend-mode: color-dodge !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+.window-content.window-content.green .header.blue input, .window-content.window-content.green .header.blue select{
+  font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Inputs and spans in header */
+.window-content.green .sheet-header input,
+.window-content.green .switchIdentite {
+    color: white !important;
+    background: darkgreen !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Hero and identite blocks */
+.window-content.green .hero,
+.window-content.green .identite {
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Generic spans */
+.window-content.green span {
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Header blocks */
+.window-content.green .sheet-header .block {
+    background: rgba(128, 255, 128, 0.5) !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Powers */
+.window-content.green div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
+.window-content.green div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
+    background: url('../assets/fond.webp') #003200 !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Powers header text */
+.window-content.green div.pouvoirs div.lPouvoirs div.pwr span.header {
+    text-shadow: 2px 2px 0px #006400, 1px 1px 0px #364438 !important;
+    background-blend-mode: color-burn !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Tabs */
+.window-content.green section.sheet-body nav.tabs a {
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Rolls */
+.window-content.green div.caracteristiques div.inner a.roll {
+    background-image: linear-gradient(180deg, darkgreen, #e6e6e6) !important;
+    color: #FFFFFF !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Item create buttons */
+.window-content.green div.pouvoirs a.item-create {
+    background-image: linear-gradient(180deg, black, #e6e6e6) !important;
+    border-bottom-color: #666 !important;
+    color: #FFFFFF !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Resets and buttons */
+.window-content.green div.caracteristiques a.resetStrategie,
+.window-content.green div.options a.btnAbs,
+.window-content.green div.totalpp a.btnOC {
+    background-image: linear-gradient(180deg, darkgreen, #e6e6e6) !important;
+    color: #FFFFFF !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Selects */
+.window-content.green select {
+    background: rgba(0, 64, 0, 0.8) !important;
+}
+
+.window-content.green select option {
+  background: #003200 !important;
+  color: white !important;
+}
+
+.window-content.green div.pouvoirs div.lPouvoirs select.link {
+    color: #EBEBEB !important;
+    border-bottom: 1px solid #FF0000 !important;
+    background: #003200 !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Textareas */
+.window-content.green textarea {
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Sheet body inputs */
+.window-content.green .sheet-body input {
+    background: #003200 !important;
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Expand/collapse powers */
+.window-content.green div.pouvoirs div.lPouvoirs div.pwr {
+    transition: background-color 0.3s, color 0.3s !important;
+}
+
+.window-content.green div.pouvoirs div.lPouvoirs div.pwr.expanded {
+    background-color: #004400 !important; /* darker green when expanded */
+    color: #FFFF99 !important;             /* light yellow text */
+}
+.window-content.green a{
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+
+}
+.window-content.green .btnOC a{
+  background-image: linear-gradient(180deg, darkgreen, #e6e6e6) !important;
+}
+.window-content.freedomcity {
+
+    /* App window */
+    color: white !important;
+    background-image: url('../assets/theme/americanbluenoise.webp') !important;
+    background-repeat: repeat !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Sheet header */
+.window-content.freedomcity .sheet-header,.window-content.freedomcity .mainName, .window-content.window-content.freedomcity .header.blue {
+    background-color: #000032 !important;
+    background-blend-mode: color-dodge !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+    background: url('../assets/fond/fond_starsstagger.webp') #000032 !important;
+}
+.window-content.window-content.freedomcity .header.blue input, .window-content.window-content.freedomcity .header.blue select{
+  font-family: 'Big Noodle Titling', sans-serif !important;
+}
+/* Inputs and spans in header */
+.window-content.freedomcity .sheet-header input,
+.window-content.freedomcity .switchIdentite {
+    color: white !important;
+    background: darkblue !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Hero and identite blocks */
+.window-content.freedomcity .hero,
+.window-content.freedomcity .identite {
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Generic spans */
+.window-content.freedomcity span {
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Header blocks */
+.window-content.freedomcity .sheet-header .block {
+    background: rgba(128, 128, 255, 0.5) !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Powers */
+.window-content.freedomcity div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
+.window-content.freedomcity div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
+    background: url('../assets/fond/fond_starsstagger.webp') #000032 !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Powers header text */
+.window-content.freedomcity div.pouvoirs div.lPouvoirs div.pwr span.header {
+    text-shadow: 2px 2px 0px #000064, 1px 1px 0px #363644 !important;
+    background-blend-mode: color-burn !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Tabs */
+.window-content.freedomcity section.sheet-body nav.tabs a {
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Rolls */
+.window-content.freedomcity div.caracteristiques div.inner a.roll {
+    background-image: linear-gradient(180deg, darkblue, #e6e6e6) !important;
+    color: #FFFFFF !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Item create buttons */
+.window-content.freedomcity div.pouvoirs a.item-create {
+    background-image: linear-gradient(180deg, black, #e6e6e6) !important;
+    border-bottom-color: #666 !important;
+    color: #FFFFFF !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Resets and buttons */
+.window-content.freedomcity div.caracteristiques a.resetStrategie,
+.window-content.freedomcity div.options a.btnAbs,
+.window-content.freedomcity div.totalpp a.btnOC {
+    background-image: linear-gradient(180deg, darkblue, #e6e6e6) !important;
+    color: #FFFFFF !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Selects */
+.window-content.freedomcity select {
+    background: rgba(0, 0, 64, 0.8) !important;
+}
+
+.window-content.freedomcity select option {
+  background: #000032 !important;
+  color: white !important;
+}
+
+.window-content.freedomcity div.pouvoirs div.lPouvoirs select.link {
+    color: #EBEBEB !important;
+    border-bottom: 1px solid #0000ff !important;
+    background: #000032 !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Textareas */
+.window-content.freedomcity textarea {
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Sheet body inputs */
+.window-content.freedomcity .sheet-body input {
+    background: #000032 !important;
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+}
+
+/* Expand/collapse powers */
+.window-content.freedomcity div.pouvoirs div.lPouvoirs div.pwr {
+    transition: background-color 0.3s, color 0.3s !important;
+}
+
+.window-content.freedomcity div.pouvoirs div.lPouvoirs div.pwr.expanded {
+    background-color: #004400 !important; /* darker blue when expanded */
+    color: #FFFFFF !important;             /* white text */
+}
+.window-content.freedomcity a{
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif !important;
+
+}
+.window-content.freedomcity .btnOC a{
+  background-image: linear-gradient(180deg, darkblue, #e6e6e6) !important;
 }

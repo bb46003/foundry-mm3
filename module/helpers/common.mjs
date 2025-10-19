@@ -1902,17 +1902,129 @@ export function accessibility(actor, html) {
     $(html.find('nav.tabs a i')).remove();
     target.prepend(`<i class="fa-solid fa-hexagon-check"></i>`);
   });
-  const theme = actor.system.theme;
-  const element = html[0];
-  if(theme !== "default" || theme !== ""){
-    let heder = element.querySelector(".sheet-header") ;
-    switch (theme){
-      case "bule":     
-        heder.style.backgroundColor = '#0022e088';
-        break
-    }
-  }
+  const theme = actor?.system?.theme;
+const element = html[0].offsetParent;
+
+if (theme && theme !== "default") {
+  // Przykład użycia
+
+applyTheme(element, theme);
+
 }
+
+
+}
+
+function applyTheme(element, theme) {
+    if (!element) return;
+
+    // Selektory
+    const selectors = {
+        app: element.querySelector(".window-content"),
+        heder: element.querySelector(".sheet-header"),
+        hederInput: element.querySelectorAll(".sheet-header input"),
+        divBlock: element.querySelector(".sheet-header .block"),
+        lPouvoirs: element.querySelector("div.pouvoirs div.lPouvoirs"),
+        tabs: element.querySelectorAll("section.sheet-body nav.tabs a"),
+        rolls: element.querySelectorAll(
+            "div.caracteristiques div.inner div.comp a.roll," +
+            "div.caracteristiques div.inner div.defense a.roll," +
+            "div.caracteristiques div.inner div.attaque a.roll," +
+            "div.caracteristiques div.inner div.carac a.roll"
+        ),
+        itemCreateButtons: element.querySelectorAll(
+            "div.pouvoirs div.lPouvoirs a.item-create," +
+            "div.pouvoirs div.lTalents a.item-create," +
+            "div.pouvoirs div.lEquipements a.item-create"
+        ),
+        resetsAndBtns: element.querySelectorAll(
+            "div.caracteristiques div.inner a.resetStrategie," +
+            "div.options div.caracteristique a.btnAbs," +
+            "div.totalpp div.btnOC a"
+        ),
+        selects: element.querySelectorAll("select"),
+        linkSelects: element.querySelectorAll("div.pouvoirs div.lPouvoirs select.link"),
+        textareas: element.querySelectorAll("textarea"),
+        inputsTabs: element.querySelectorAll(".sheet-body input"),
+        powersBlue: element.querySelectorAll("div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader"),
+        powersRed: element.querySelectorAll("div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader"),
+        powersHeader: element.querySelectorAll("div.pouvoirs div.lPouvoirs div.pwr span.header")
+    };
+
+    // Definicja stylów per temat
+    const themeStyles = {
+        bule: {
+            app: {
+                color: "white",
+                backgroundImage: "url('systems/mutants-and-masterminds-3e/assets/theme/darkgreennoise.webp')",
+                backgroundRepeat: "repeat"
+            },
+            heder: {
+                backgroundColor: "#003200",
+                backgroundBlendMode: "color-burn, color-burn, color-burn"
+            },
+            hederInput: {
+                color: "white",
+                background: "darkgreen"
+            },
+            divBlock: {
+                background: "rgba(128, 255, 128, 0.5)"
+            },
+            powersBlue: {
+                background: "url('systems/mutants-and-masterminds-3e/assets/fond.webp') #003200"
+            },
+            powersRed: {
+                background: "url('systems/mutants-and-masterminds-3e/assets/fond.webp') #003200"
+            },
+            powersHeader: {
+                textShadow: "2px 2px 0px #006400, 1px 1px 0px #364438",
+                backgroundBlendMode: "color-burn, color-burn"
+            },
+            tabs: { color: "white" },
+            rolls: {
+                backgroundImage: "linear-gradient(180deg, darkgreen, #e6e6e6)",
+                color: "#FFFFFF"
+            },
+            itemCreateButtons: {
+                backgroundImage: "linear-gradient(180deg, black, #e6e6e6)",
+                borderBottomColor: "#666",
+                color: "#FFFFFF"
+            },
+            resetsAndBtns: {
+                backgroundImage: "linear-gradient(180deg, darkgreen, #e6e6e6)",
+                color: "#FFFFFF"
+            },
+            selects: { background: "rgba(0, 64, 0, 0.8)" },
+            linkSelects: {
+                color: "#EBEBEB",
+                borderBottom: "1px solid #FF0000",
+                background: "#003200"
+            },
+            textareas: { color: "white" },
+            inputsTabs: { background: "#003200", color: "white" }
+        }
+    };
+
+    const styles = themeStyles[theme];
+    if (!styles) return;
+
+    // Funkcja pomocnicza do przypisywania stylów
+    const applyStyles = (elements, styleObj) => {
+        if (!elements) return;
+        if (NodeList.prototype.isPrototypeOf(elements) || Array.isArray(elements)) {
+            elements.forEach(el => Object.assign(el.style, styleObj));
+        } else {
+            Object.assign(elements.style, styleObj);
+        }
+    };
+
+    // Aplikacja stylów
+    for (const key in styles) {
+        applyStyles(selectors[key], styles[key]);
+    }
+}
+
+
 
 export async function deletePrompt(actor, label) {
   const setting = game.settings.get("mutants-and-masterminds-3e", "font");

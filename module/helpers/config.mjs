@@ -382,9 +382,9 @@ MM3.sheetTheme = {
     "default" : "MM3.THEME.default",
     "green": "MM3.THEME.green",
     "freedomcity": "MM3.THEME.freedomcity",
-    "techblue": "MM3.THEME.techbule",
-    "techblue2": "MM3.THEME.techbule2",
-    "bloodred": "MM3.THEME.bloodRed",
-    "bloodred2": "MM3.THEME.bloodRed2",
+    "techblue": "MM3.THEME.techblue",
+    "techblue2": "MM3.THEME.techblue2",
+    "bloodred": "MM3.THEME.bloodred",
+    "bloodred2": "MM3.THEME.bloodred2",
     "gothblack": "MM3.THEME.gothblack"
 }

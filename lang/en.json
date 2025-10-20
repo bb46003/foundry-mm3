@@ -457,7 +457,12 @@
       "label": "Select your character sheet theme",
       "default":"System default",
       "green": "Emerald City",
-      "freedomcity": "Freedom City"
+      "freedomcity": "Freedom City",
+      "techblue": "Tech Blue",
+      "techblue2": "Tech Blue 2",
+      "bloodred": "Blood Red",
+      "bloodred2": "Blood Red 2",
+      "gothblack": "Goth Black"
     }
   }
 }

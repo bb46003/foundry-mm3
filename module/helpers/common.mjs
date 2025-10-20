@@ -1905,21 +1905,40 @@ export function accessibility(actor, html) {
   const theme = actor?.system?.theme;
   const element = html[0].offsetParent;
   const app = element.querySelector(".window-content");
+  const fontSelector = app.querySelector('[name="system.accessibility.font"]');
+  const otherFontSelector = app.querySelector('[name="system.accessibility.fontOther"]');
   if (theme && theme !== "default") {
-    switch(theme){
+        switch(theme){
       case "green":
-        app.className = "window-content";
-        app.classList.add("green");
+        app.className = "window-content green";
         break
       case "freedomcity":
-        app.className = "window-content";
-        app.classList.add("freedomcity");
+        app.className = "window-content freedomcity";
+        break
+      case "techblue2":
+         app.className = "window-content techblue2";
+         break
+      case "techblue":
+         app.className = "window-content techblue";
+         break
+      case "bloodred":
+        app.className = "window-content bloodred";
+        break
+      case "bloodred2":
+        app.className = "window-content bloodred2";
+        break
+      case "gothblack":
+        app.className = "window-content gothblack";
         break
     }
-    
+    console.log(fontSelector)
+    fontSelector.parentElement.style.display = "none";
+    otherFontSelector.parentElement.style.display = 'none';    
   }
   else{
     app.className = "window-content";
+    fontSelector.parentElement.style.display = "";
+    otherFontSelector.parentElement.style.display = '';    
   }
 }
 export function itemTheme(html){
@@ -1931,10 +1950,25 @@ export function itemTheme(html){
   if (theme && theme !== "default") {
     switch(theme){
       case "green":
-        app.classList.add("green");
+        app.className = "window-content green";
         break
       case "freedomcity":
-        app.classList.add("freedomcity");
+        app.className = "window-content freedomcity";
+        break
+      case "techblue2":
+         app.className = "window-content techblue2";
+         break
+      case "techblue":
+         app.className = "window-content techblue";
+         break
+      case "bloodred":
+        app.className = "window-content bloodred";
+        break
+      case "bloodred2":
+        app.className = "window-content bloodred2";
+        break
+      case "gothblack":
+        app.className = "window-content gothblack";
         break
     }
     

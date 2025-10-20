@@ -10743,6 +10743,7 @@ section#compendium > header:first-of-type:before {
 .window-content.freedomcity .sheet-header,.window-content.freedomcity .mainName, .window-content.window-content.freedomcity .header.blue {
         background-color: #0A3161 !important;
         background-blend-mode: color-dodge !important;
+        background: url('../assets/fond/fond_starsstagger.webp') #0A3161 !important;
         font-family: 'Big Noodle Titling', sans-serif !important;
 }
 
@@ -10773,7 +10774,7 @@ section#compendium > header:first-of-type:before {
 /* Powers */
 .window-content.freedomcity div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
 .window-content.freedomcity div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-        background: url('../assets/fond_starsstagger.webp') #0A3161 !important;
+        background: url('../assets/fond/fond_starsstagger.webp') #0A3161 !important;
         font-family: 'Big Noodle Titling', sans-serif !important;
 }
 /* Powers header text */
@@ -10858,6 +10859,7 @@ section#compendium > header:first-of-type:before {
 /* Sheet header */
 .window-content.techblue2 .sheet-header,.window-content.techblue2 .mainName, .window-content.window-content.freetechblueomcity .header.blue  {
     background-color: #000080 !important;
+    background: url('../assets/fond/fond_Meteor.webp') #000080 !important;
     background-blend-mode: color-dodge !important;
     font-family: 'Tektur', sans-serif !important;
 }
@@ -10888,7 +10890,7 @@ section#compendium > header:first-of-type:before {
 /* Powers */
 .window-content.techblue2 div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
 .window-content.techblue2 div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-    background: url('../assets/fond_Meteor.webp') #000080 !important;
+    background: url('../assets/fond/fond_Meteor.webp') #000080 !important;
     font-family: 'Tektur', sans-serif !important;
 }
 /* Powers header text */
@@ -10973,6 +10975,7 @@ section#compendium > header:first-of-type:before {
 /* Sheet header */
 .window-content.techblue .sheet-header,.window-content.techblue .mainName, .window-content.window-content.techblue .header.blue {
         background-color: #000080 !important;
+        background: url('../assets/fond/fond_cubic.webp') #000080 !important;
         background-blend-mode: color-dodge !important;
         font-family: 'Goldman', sans-serif !important;
 }
@@ -11003,7 +11006,7 @@ section#compendium > header:first-of-type:before {
 /* Powers */
 .window-content.techblue div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
 .window-content.techblue div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-        background: url('../assets/fond_cubic.webp') #000080 !important;
+        background: url('../assets/fond/fond_cubic.webp') #000080 !important;
         font-family: 'Goldman', sans-serif !important;
 }
 /* Powers header text */
@@ -11088,6 +11091,7 @@ section#compendium > header:first-of-type:before {
 /* Sheet header */
 .window-content.bloodred .sheet-header,.window-content.bloodred .mainName, .window-content.window-content.bloodred .header.blue { 
         background-color: #800000 !important;
+        background: url('../assets/fond/fond_drip.webp') #8B0000 !important;
         background-blend-mode: color-dodge !important;
         font-family: 'Bebas Neue', sans-serif !important;
 }
@@ -11118,7 +11122,7 @@ section#compendium > header:first-of-type:before {
 /* Powers */
 .window-content.bloodred div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
 .window-content.bloodred div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-        background: url('../assets/fond_drip.webp') #8B0000 !important;
+        background: url('../assets/fond/fond_drip.webp') #8B0000 !important;
         font-family: 'Bebas Neue', sans-serif !important;
 }
 /* Powers header text */
@@ -11205,6 +11209,7 @@ section#compendium > header:first-of-type:before {
         background-color: #800000 !important;
         background-blend-mode: color-dodge !important;
         font-family: 'Creepster', sans-serif !important;
+        background: url('../assets/fond/fond_drip.webp') #8B0000 !important;
 }
 .window-content.window-content.bloodred2 .header.blue input, .window-content.window-content.bloodred2 .header.blue select{
     font-family: 'Creepster', sans-serif !important;
@@ -11234,7 +11239,7 @@ section#compendium > header:first-of-type:before {
 /* Powers */
 .window-content.bloodred2 div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
 .window-content.bloodred2 div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-        background: url('../assets/fond_drip.webp') #8B0000 !important;
+        background: url('../assets/fond/fond_drip.webp') #8B0000 !important;
         font-family: 'Creepster', sans-serif !important;
 }
 /* Powers header text */
@@ -11319,6 +11324,7 @@ section#compendium > header:first-of-type:before {
 /* Sheet header */
 .window-content.gothblack .sheet-header,.window-content.gothblack .mainName, .window-content.window-content.gothblack .header.blue {
         background-color: #000000 !important;
+        background: url('../assets/fond/fond_skulls.webp') #000000 !important;
         background-blend-mode: color-dodge !important;
         font-family: 'Pirata One', sans-serif !important;
 }
@@ -11350,7 +11356,7 @@ section#compendium > header:first-of-type:before {
 /* Powers */
 .window-content.gothblack div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
 .window-content.gothblack div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-        background: url('../assets/fond_skulls.webp') #000000 !important;
+        background: url('../assets/fond/fond_skulls.webp') #000000 !important;
         font-family: 'Pirata One', sans-serif !important;
 }
 /* Powers header text */

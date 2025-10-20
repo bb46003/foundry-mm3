@@ -11319,7 +11319,7 @@ section#compendium > header:first-of-type:before {
 /* Sheet header */
 .window-content.gothblack .sheet-header,.window-content.gothblack .mainName, .window-content.window-content.gothblack .header.blue {
         background: url('../assets/fond/fond_skulls.webp') #000000 !important;
-        background-blend-mode: color-dodge !important;
+        background-blend-mode: unset !important;
         font-family: 'Pirata One', sans-serif !important;
 }
 
@@ -11351,6 +11351,7 @@ section#compendium > header:first-of-type:before {
 .window-content.gothblack div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
 .window-content.gothblack div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
         background: url('../assets/fond/fond_skulls.webp') #000000 !important;
+         background-blend-mode: unset !important;
         font-family: 'Pirata One', sans-serif !important;
 }
 /* Powers header text */

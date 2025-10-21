@@ -10868,7 +10868,7 @@ section#compendium > header:first-of-type:before {
 .window-content.techblue2 .sheet-header input,
 .window-content.techblue2 .switchIdentite {
     color: white !important;
-    background: navyblue !important;
+    background: navy !important;
     font-family: 'Tektur', sans-serif;
 }
 /* Hero and identite blocks */
@@ -10904,13 +10904,13 @@ section#compendium > header:first-of-type:before {
 }
 /* Rolls */
 .window-content.techblue2 div.caracteristiques div.inner a.roll {
-    background-image: linear-gradient(180deg, navyblue, #e6e6e6) !important;
+    background-image: linear-gradient(180deg, navy, #e6e6e6) !important;
     color: #FFFFFF !important;
     font-family: 'Tektur', sans-serif;
 }
 /* Item create buttons */
 .window-content.techblue2 div.pouvoirs a.item-create {
-    background-image: linear-gradient(180deg, navyblue, #e6e6e6) !important;
+    background-image: linear-gradient(180deg, navy, #e6e6e6) !important;
     border-bottom-color: #666 !important;
     color: #FFFFFF !important;
     font-family: 'Tektur', sans-serif;
@@ -10919,7 +10919,7 @@ section#compendium > header:first-of-type:before {
 .window-content.techblue2 div.caracteristiques a.resetStrategie,
 .window-content.techblue2 div.options a.btnAbs,
 .window-content.techblue2 div.totalpp a.btnOC {
-    background-image: linear-gradient(180deg, navyblue, #e6e6e6) !important;
+    background-image: linear-gradient(180deg, navy, #e6e6e6) !important;
     color: #FFFFFF !important;
     font-family: 'Tektur', sans-serif;
 }
@@ -10953,7 +10953,7 @@ section#compendium > header:first-of-type:before {
     transition: background-color 0.3s, color 0.3s !important;
 }
 .window-content.techblue2 div.pouvoirs div.lPouvoirs div.pwr.expanded {
-    background-color: #000080 !important; /* navyblue when expanded */
+    background-color: #000080 !important; /* navy when expanded */
     color: #FFFFFF !important;             /* white text */
 }
 .window-content.techblue2 a{
@@ -10961,7 +10961,7 @@ section#compendium > header:first-of-type:before {
     font-family: 'Tektur', sans-serif;
 }
 .window-content.techblue2 .btnOC a{
-  background-image: linear-gradient(180deg, navyblue, #e6e6e6) !important;
+  background-image: linear-gradient(180deg, navy, #e6e6e6) !important;
 }
 .window-content.techblue {
         /* App window */
@@ -10983,7 +10983,7 @@ section#compendium > header:first-of-type:before {
 .window-content.techblue .sheet-header input,
 .window-content.techblue .switchIdentite {
         color: white !important;
-        background: navyblue !important;
+        background: navy !important;
         font-family: 'Goldman', sans-serif;
 }
 /* Hero and identite blocks */
@@ -11019,13 +11019,13 @@ section#compendium > header:first-of-type:before {
 }
 /* Rolls */
 .window-content.techblue div.caracteristiques div.inner a.roll {
-        background-image: linear-gradient(180deg, navyblue, #e6e6e6) !important;
+        background-image: linear-gradient(180deg, navy, #e6e6e6) !important;
         color: #FFFFFF !important;
         font-family: 'Goldman', sans-serif;
 }
 /* Item create buttons */
 .window-content.techblue div.pouvoirs a.item-create {
-        background-image: linear-gradient(180deg, navyblue, #e6e6e6) !important;
+        background-image: linear-gradient(180deg, navy, #e6e6e6) !important;
         border-bottom-color: #666 !important;
         color: #FFFFFF !important;
         font-family: 'Goldman', sans-serif;
@@ -11034,7 +11034,7 @@ section#compendium > header:first-of-type:before {
 .window-content.techblue div.caracteristiques a.resetStrategie,
 .window-content.techblue div.options a.btnAbs,
 .window-content.techblue div.totalpp a.btnOC {
-        background-image: linear-gradient(180deg, navyblue, #e6e6e6) !important;
+        background-image: linear-gradient(180deg, navy, #e6e6e6) !important;
         color: #FFFFFF !important;
         font-family: 'Goldman', sans-serif;
 }
@@ -11068,7 +11068,7 @@ section#compendium > header:first-of-type:before {
         transition: background-color 0.3s, color 0.3s !important;
 }
 .window-content.techblue div.pouvoirs div.lPouvoirs div.pwr.expanded {
-        background-color: #000080 !important; /* navyblue when expanded */
+        background-color: #000080 !important; /* navy when expanded */
         color: #FFFFFF !important;             /* white text */
 }
 .window-content.techblue a{
@@ -11076,7 +11076,7 @@ section#compendium > header:first-of-type:before {
         font-family: 'Goldman', sans-serif;
 }
 .window-content.techblue .btnOC a{
-      background-image: linear-gradient(180deg, navyblue, #e6e6e6) !important;
+      background-image: linear-gradient(180deg, navy, #e6e6e6) !important;
 }
 .window-content.bloodred {
         /* App window */
@@ -11425,4 +11425,274 @@ section#compendium > header:first-of-type:before {
 }
 .window-content.gothblack .btnOC a{
       background-image: linear-gradient(180deg, black, #e6e6e6) !important;
+}
+.window-content.cosmicblue {
+    /* App window */
+    color: white !important;
+    background-image: url('../assets/theme/darkerbluenoise.webp') !important;
+    background-repeat: repeat !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Sheet header */
+.window-content.cosmicblue .sheet-header,.window-content.cosmicblue .mainName, .window-content.window-content.cosmicblue .header.blue {
+    background-color: #000016 !important;
+   background: url('../assets/fond/fond_cosmic1.webp') #000016 !important;
+    background-blend-mode: screen !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+.window-content.window-content.cosmicblue .header.blue input, .window-content.window-content.cosmicblue .header.blue select{
+ font-family: 'Big Noodle Titling', sans-serif;
+}
+/* Inputs and spans in header */
+.window-content.cosmicblue .sheet-header input,
+.window-content.cosmicblue .switchIdentite {
+    color: white !important;
+    background: midnightblue !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Hero and identite blocks */
+.window-content.cosmicblue .hero,
+.window-content.cosmicblue .identite {
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Generic spans */
+.window-content.cosmicblue span {
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Header blocks */
+.window-content.cosmicblue .sheet-header .block {
+    background: rgba(128, 128, 255, 0.5) !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Powers */
+.window-content.cosmicblue div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
+.window-content.cosmicblue div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
+    background: url('../assets/fond/fond_cosmic1.webp') #000016 !important;
+    background-blend-mode: screen !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Powers header text */
+.window-content.cosmicblue div.pouvoirs div.lPouvoirs div.pwr span.header {
+    text-shadow: 2px 2px 0px #000016, 1px 1px 0px #363644 !important;
+    background-blend-mode: color-burn !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Tabs */
+.window-content.cosmicblue section.sheet-body nav.tabs a {
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Rolls */
+.window-content.cosmicblue div.caracteristiques div.inner a.roll {
+    background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
+    color: #FFFFFF !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Item create buttons */
+.window-content.cosmicblue div.pouvoirs a.item-create {
+    background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
+    border-bottom-color: #666 !important;
+    color: #FFFFFF !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Resets and buttons */
+.window-content.cosmicblue div.caracteristiques a.resetStrategie,
+.window-content.cosmicblue div.options a.btnAbs,
+.window-content.cosmicblue div.totalpp a.btnOC {
+    background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
+    color: #FFFFFF !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Selects */
+.window-content.cosmicblue select {
+    background: rgba(0, 64, 0, 0.8) !important;
+}
+
+.window-content.cosmicblue select option {
+  background: #000016 !important;
+  color: white !important;
+}
+
+.window-content.cosmicblue div.pouvoirs div.lPouvoirs select.link {
+    color: #EBEBEB !important;
+    border-bottom: 1px solid #0000FF !important;
+    background: #000016 !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Textareas */
+.window-content.cosmicblue textarea {
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Sheet body inputs */
+.window-content.cosmicblue .sheet-body input {
+    background: #000016 !important;
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Expand/collapse powers */
+.window-content.cosmicblue div.pouvoirs div.lPouvoirs div.pwr {
+    transition: background-color 0.3s, color 0.3s !important;
+}
+
+.window-content.cosmicblue div.pouvoirs div.lPouvoirs div.pwr.expanded {
+    background-color: #000016 !important; /* midnight blue when expanded */
+    color: #FFFFFF !important;             /* white text */
+}
+.window-content.cosmicblue a{
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+
+}
+.window-content.cosmicblue .btnOC a{
+  background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
+}
+.window-content.starburst {
+    /* App window */
+    color: white !important;
+    background-image: url('../assets/theme/darkerbluenoise.webp') !important;
+    background-repeat: repeat !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Sheet header */
+.window-content.starburst .sheet-header,.window-content.starburst .mainName, .window-content.window-content.starburst .header.blue {
+    background-color: #000016 !important;
+   background: url('../assets/fond/fond_starburst.webp') #000016 !important;
+    background-blend-mode: screen !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+.window-content.window-content.starburst .header.blue input, .window-content.window-content.starburst .header.blue select{
+ font-family: 'Big Noodle Titling', sans-serif;
+}
+/* Inputs and spans in header */
+.window-content.starburst .sheet-header input,
+.window-content.starburst .switchIdentite {
+    color: white !important;
+    background: midnightblue !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Hero and identite blocks */
+.window-content.starburst .hero,
+.window-content.starburst .identite {
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Generic spans */
+.window-content.starburst span {
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Header blocks */
+.window-content.starburst .sheet-header .block {
+    background: rgba(128, 128, 255, 0.5) !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Powers */
+.window-content.starburst div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
+.window-content.starburst div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
+    background: url('../assets/fond/fond_starburst.webp') #000016 !important;
+    background-blend-mode: screen !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Powers header text */
+.window-content.starburst div.pouvoirs div.lPouvoirs div.pwr span.header {
+    text-shadow: 2px 2px 0px #000016, 1px 1px 0px #363644 !important;
+    background-blend-mode: color-burn !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Tabs */
+.window-content.starburst section.sheet-body nav.tabs a {
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Rolls */
+.window-content.starburst div.caracteristiques div.inner a.roll {
+    background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
+    color: #FFFFFF !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Item create buttons */
+.window-content.starburst div.pouvoirs a.item-create {
+    background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
+    border-bottom-color: #666 !important;
+    color: #FFFFFF !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Resets and buttons */
+.window-content.starburst div.caracteristiques a.resetStrategie,
+.window-content.starburst div.options a.btnAbs,
+.window-content.starburst div.totalpp a.btnOC {
+    background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
+    color: #FFFFFF !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Selects */
+.window-content.starburst select {
+    background: rgba(0, 64, 0, 0.8) !important;
+}
+
+.window-content.starburst select option {
+  background: #000016 !important;
+  color: white !important;
+}
+
+.window-content.starburst div.pouvoirs div.lPouvoirs select.link {
+    color: #EBEBEB !important;
+    border-bottom: 1px solid #0000FF !important;
+    background: #000016 !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Textareas */
+.window-content.starburst textarea {
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Sheet body inputs */
+.window-content.starburst .sheet-body input {
+    background: #000016 !important;
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+}
+
+/* Expand/collapse powers */
+.window-content.starburst div.pouvoirs div.lPouvoirs div.pwr {
+    transition: background-color 0.3s, color 0.3s !important;
+}
+
+.window-content.starburst div.pouvoirs div.lPouvoirs div.pwr.expanded {
+    background-color: #000016 !important; /* midnight blue when expanded */
+    color: #FFFFFF !important;             /* white text */
+}
+.window-content.starburst a{
+    color: white !important;
+    font-family: 'Big Noodle Titling', sans-serif;
+
+}
+.window-content.starburst .btnOC a{
+  background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
 }

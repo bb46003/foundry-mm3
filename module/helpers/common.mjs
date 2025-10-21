@@ -1907,34 +1907,41 @@ export async function accessibility(actor, html) {
   const element = html[0].offsetParent;
   const app = element?.querySelector(".window-content");
   if(app){
+    const className = "window-content";
   if (theme && theme !== "default") {
         switch(theme){
       case "green":
-        app.className = "window-content green";
+        app.className = className + " green";
         break
       case "freedomcity":
-        app.className = "window-content freedomcity";
+        app.className = className + " freedomcity";
         break
       case "techblue2":
-         app.className = "window-content techblue2";
+         app.className = className + " techblue2";
          break
       case "techblue":
-         app.className = "window-content techblue";
+         app.className = className + " techblue";
          break
       case "bloodred":
-        app.className = "window-content bloodred";
+        app.className = className + " bloodred";
         break
       case "bloodred2":
-        app.className = "window-content bloodred2";
+        app.className = className + " bloodred2";
         break
       case "gothblack":
-        app.className = "window-content gothblack";
+        app.className = className + " gothblack";
+        break
+      case "cosmicblue":
+        app.className = className + " cosmicblue";
+        break
+      case "starburst":
+        app.className = className + " starburst";
         break
     } 
     
   }
   else{
-    app.className = "window-content";  
+    app.className = className;  
   }
 }
    
@@ -1946,35 +1953,42 @@ export function itemTheme(html){
   const element = html.element[0];
   const app = element?.querySelector(".window-content");
   if(app){
+    const className = "window-content";
   if (theme && theme !== "default") {
     switch(theme){
       case "green":
-        app.className = "window-content green";
+        app.className = className + " green";
         break
       case "freedomcity":
-        app.className = "window-content freedomcity";
+        app.className = className + " freedomcity";
         break
       case "techblue2":
-         app.className = "window-content techblue2";
+         app.className = className + " techblue2";
          break
       case "techblue":
-         app.className = "window-content techblue";
+         app.className = className + " techblue";
          break
       case "bloodred":
-        app.className = "window-content bloodred";
+        app.className = className + " bloodred";
         break
       case "bloodred2":
-        app.className = "window-content bloodred2";
+        app.className = className + " bloodred2";
         break
       case "gothblack":
-        app.className = "window-content gothblack";
+        app.className = className + " gothblack";
+        break
+      case "cosmicblue":
+        app.className = className + " cosmicblue";
+        break
+      case "starburst":
+        app.className = className + " starburst";
         break
     }
   
     
   }
   else{
-    app.className = "window-content";
+    app.className = className + "";
   }
 }
 }

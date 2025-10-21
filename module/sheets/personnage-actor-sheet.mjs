@@ -161,6 +161,12 @@ export class PersonnageActorSheet extends ActorSheet {
 
       this.actor.update({[`system.filtre`]:type});
     });
+    html.on("change", `select[name="system.theme"]`, async (ev) => {
+      await this.actor.update({
+        "system.accessibility.font": "Kalam",
+        "system.accessibility.fontOther": ""
+      });
+    });
   }
 
   /* -------------------------------------------- */

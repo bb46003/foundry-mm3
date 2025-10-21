@@ -1859,7 +1859,7 @@ export function getFullCarac(carac){
     return result;
 }
 
-export function accessibility(actor, html) {
+export async function accessibility(actor, html) {
   const setting = game.settings.get("mutants-and-masterminds-3e", "font");
   const options = actor?.system?.accessibility ?? null;
   const font = options !== null ? options?.font ?? null : null;
@@ -1903,8 +1903,10 @@ export function accessibility(actor, html) {
     target.prepend(`<i class="fa-solid fa-hexagon-check"></i>`);
   });
   const theme = actor?.system?.theme;
+  
   const element = html[0].offsetParent;
-  const app = element.querySelector(".window-content");
+  const app = element?.querySelector(".window-content");
+  if(app){
   if (theme && theme !== "default") {
         switch(theme){
       case "green":
@@ -1928,18 +1930,22 @@ export function accessibility(actor, html) {
       case "gothblack":
         app.className = "window-content gothblack";
         break
-    }   
+    } 
+    
   }
   else{
     app.className = "window-content";  
   }
+}
+   
 }
 export function itemTheme(html){
   const actor = game.user.character;
   if(actor){
   const theme = actor?.system?.theme;
   const element = html.element[0];
-  const app = element.querySelector(".window-content");
+  const app = element?.querySelector(".window-content");
+  if(app){
   if (theme && theme !== "default") {
     switch(theme){
       case "green":
@@ -1964,11 +1970,13 @@ export function itemTheme(html){
         app.className = "window-content gothblack";
         break
     }
+  
     
   }
   else{
     app.className = "window-content";
   }
+}
 }
 
 

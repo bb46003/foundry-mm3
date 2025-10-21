@@ -1905,8 +1905,6 @@ export function accessibility(actor, html) {
   const theme = actor?.system?.theme;
   const element = html[0].offsetParent;
   const app = element.querySelector(".window-content");
-  const fontSelector = app.querySelector('[name="system.accessibility.font"]');
-  const otherFontSelector = app.querySelector('[name="system.accessibility.fontOther"]');
   if (theme && theme !== "default") {
         switch(theme){
       case "green":
@@ -1930,15 +1928,10 @@ export function accessibility(actor, html) {
       case "gothblack":
         app.className = "window-content gothblack";
         break
-    }
-    console.log(fontSelector)
-    fontSelector.parentElement.style.display = "none";
-    otherFontSelector.parentElement.style.display = 'none';    
+    }   
   }
   else{
-    app.className = "window-content";
-    fontSelector.parentElement.style.display = "";
-    otherFontSelector.parentElement.style.display = '';    
+    app.className = "window-content";  
   }
 }
 export function itemTheme(html){

@@ -388,5 +388,6 @@ MM3.sheetTheme = {
     "bloodred2": "MM3.THEME.bloodred2",
     "gothblack": "MM3.THEME.gothblack",
     "cosmicblue": "MM3.THEME.cosmicblue",
-    "starburst": "MM3>THEME.starburst"
+    "starburst": "MM3.THEME.starburst",
+    "matrixblack": "MM3.THEME.matrixblack"
 }

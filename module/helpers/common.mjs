@@ -1868,30 +1868,29 @@ export async function accessibility(actor, html) {
 
   if(setting === 'default') {
     if(font !== null) {
-      html.find('div.editor-content').css('font-family', font);
+      html.find('div.editor-content').each((_, el) => {
+        el.style.setProperty('font-family', font, 'important');
+      });
     }
-
     if(fontOther !== null || fontOther !== 'null') {
-      html.find('input[type="text"]').css('font-family', fontOther);
-      html.find('h4').css('font-family', fontOther);
-      html.find('select').css('font-family', fontOther);
-      html.find('a').css('font-family', fontOther);
-      html.find('span').css('font-family', fontOther);
-
-
-
+      html.find('input[type="text"], h4, select, a, span').each((_, el) => {
+        el.style.setProperty('font-family', fontOther, 'important');
+      });
       if(resized.includes(fontOther)) html.find('a.item').css('font-size', '11px');
     }
-  } else {
-    html.find('div.editor-content').css('font-family', setting);
-    html.find('input[type="text"]').css('font-family', setting);
-    html.find('h4').css('font-family', setting);
-    html.find('select').css('font-family', setting);
-    html.find('a').css('font-family', setting);
-    html.find('span').css('font-family', setting);
+  } 
+  else {
+    const selectors = 'div.editor-content, input[type="text"], h4, select, a, span';
+    // apply !important properly
+    html.find(selectors).each((_, el) => {
+      el.style.setProperty('font-family', setting, 'important');
+    });
+    // remove the helper element
     html.find('.accessibilityFont').remove();
-
-    if(resized.includes(setting)) html.find('a.item').css('font-size', '11px');
+    // font resizing still ok (no !important needed here)
+    if (resized.includes(setting)) {
+        html.find('a.item').css('font-size', '11px');
+    }
   }
 
   $(html.find('a.selected')).prepend(`<i class="fa-solid fa-hexagon-check"></i>`);
@@ -1936,6 +1935,9 @@ export async function accessibility(actor, html) {
         break
       case "starburst":
         app.className = className + " starburst";
+        break
+      case "matrixblack":
+        app.className = className + " matrixblack";
         break
     } 
     
@@ -1983,16 +1985,16 @@ export function itemTheme(html){
       case "starburst":
         app.className = className + " starburst";
         break
-    }
-  
-    
+      case "matrixblack":
+        app.className = className + " matrixblack";
+        break
+    }    
   }
   else{
     app.className = className + "";
   }
 }
 }
-
 
 }
 export async function deletePrompt(actor, label) {

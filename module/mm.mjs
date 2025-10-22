@@ -28,7 +28,6 @@ import { MM3 } from "./helpers/config.mjs";
 import toggler from './helpers/toggler.js';
 import { measureDistances } from "./helpers/canvas.mjs";
 
-
 import {
   rollAtkTgt,
   rollAtk,
@@ -57,8 +56,9 @@ import {
 import { MigrationMM3 } from "./migration.mjs";
 
 import { parseInput, } from "./parse_simple_character.mjs";
-//import cheerio from 'cheerio';
 
+import { JurnalThemeDialog } from "./helpers/jurnal-theme-dialog.mjs";
+//import cheerio from 'cheerio';
 /* -------------------------------------------- */
 /*  Init Hook                                   */
 /* -------------------------------------------- */
@@ -532,7 +532,6 @@ Hooks.once('init', async function() {
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
 });
-
 /* -------------------------------------------- */
 /*  Ready Hook                                  */
 /* -------------------------------------------- */
@@ -572,8 +571,6 @@ Hooks.once('ready', async function () {
   $("div#interface").removeClass(listBg);
   $("div#interface").addClass(whatMenu);
 });
-
-
 Hooks.on('renderActorDirectory', async function () {
   if(!game.user.isGM) return;
   const setting = game.settings.get("mutants-and-masterminds-3e", "font");
@@ -644,13 +641,7 @@ Hooks.on('renderActorDirectory', async function () {
   addJabImportButtonToActorDirectory(setting);
 
 });
-
-
-
 //import { parseInput } from './parse_simple_character.mjs';
-
-
-
 function addJabImportButtonToActorDirectory(setting) {
   let addHtml = ``;
 
@@ -1079,7 +1070,7 @@ function convertExtras(power, simplePower){
   }
 }
 
-  function convertFlaws(power, simplePower){
+function convertFlaws(power, simplePower){
     power.flaws = {};
     power.flaws.flaw = [];
     let flaws = simplePower.flaws;
@@ -1096,9 +1087,9 @@ function convertExtras(power, simplePower){
         }
       }
     }
-  }
+}
 
-  function convertFeats(power, simplePower){
+function convertFeats(power, simplePower){
   let extras = simplePower.feats;
   if(extras){
     for (let i = 0; i < extras.length; i++) {
@@ -1542,3 +1533,34 @@ Hooks.on("canvasInit", function () {
     SquareGrid.prototype.measureDistances = measureDistances;
   }
 });
+Hooks.on("renderJournalEntrySheet", (html) => {
+  let element;
+  let uuid;
+  if(game.release.generation < 13){
+    element = html[0];
+    uuid = html.document.uuid;
+  }
+  else{
+    element = html.element;
+    uuid = html.document.uuid;
+  }
+  console.log(element)
+  const header = element.querySelector(".window-header");
+  const title = header.querySelector("h1"); 
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.classList.add("header-control", "icon", "fa-solid", "fa-palette");
+  btn.dataset.tooltip = game.i18n.localize("MM3.JURNAL.ThemeTooltip");
+  btn.ariaLabel =game.i18n.localize("MM3.JURNAL.ThemeTooltip");
+  title.insertAdjacentElement("afterend", btn);
+  btn.addEventListener("click", (ev) => {
+    ev.stopPropagation();
+    const data = {element : element, uuid: uuid}
+    const dialog = new JurnalThemeDialog(data);
+    dialog.render(true)
+  });
+  const flags = html.document?.flags?.MM3?.theme;
+  if(flags){
+    //apply theme
+  }
+})

@@ -1902,7 +1902,7 @@ export async function accessibility(actor, html) {
     target.prepend(`<i class="fa-solid fa-hexagon-check"></i>`);
   });
   const theme = actor?.system?.theme;
-  
+  const overlaeyType = actor?.system?.overlayType;
   const element = html[0].offsetParent;
   const app = element?.querySelector(".window-content");
   if(app){
@@ -1945,6 +1945,10 @@ export async function accessibility(actor, html) {
   else{
     app.className = "window-content";  
   }
+  if (overlaeyType !== "default") {
+    app.style.setProperty("--header-blend", overlaeyType);
+  } 
+  
 }
    
 }

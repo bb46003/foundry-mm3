@@ -10617,6 +10617,8 @@ section#compendium > header:first-of-type:before {
     background: var(--header-bg, none) !important;
     background-blend-mode: var(--header-blend, unset) !important;
     font-family: var(--font-family, sans-serif) !important;
+    background-repeat: no-repeat !important;
+    background-size: var(--header-size, auto) !important;
 }
 
 .window-content.theme-base .header.blue input,
@@ -10684,10 +10686,10 @@ section#compendium > header:first-of-type:before {
 
 /* Selects */
 .window-content.theme-base select {
-    background: var(--select-bg, rgba(22,22,22,0.8)) !important;
+    background: var(--input-bg, rgba(22,22,22,0.8)) !important;
 }
 .window-content.theme-base select option {
-    background: var(--select-option-bg, black) !important;
+    background: var(--input-bg, white) !important;
     color: var(--text-color, white) !important;
 }
 .window-content.theme-base div.pouvoirs div.lPouvoirs select.link {
@@ -10699,7 +10701,8 @@ section#compendium > header:first-of-type:before {
 
 /* Textareas */
 .window-content.theme-base textarea,
-.window-content.theme-base .sheet-body input {
+.window-content.theme-base .sheet-body input,
+.window-content.theme-base .editor-content {
     color: var(--text-color, white) !important;
     background: var(--input-bg, black) !important;
     font-family: var(--font-family, sans-serif) !important;
@@ -10732,7 +10735,7 @@ section#compendium > header:first-of-type:before {
     --font-family: 'Pirata One', sans-serif;
     --window-bg: url('../assets/theme/blacknoise.webp');
     --header-bg: url('../assets/fond/fond_skulls.webp') #000016;
-    --header-blend: unset;
+    --header-blend: overlay;
     --input-bg: black;
     --block-bg: rgba(64,64,64,0.5);
     --power-bg: url('../assets/fond/fond_skulls.webp') #000000;
@@ -10745,7 +10748,8 @@ section#compendium > header:first-of-type:before {
     --font-family: 'Creepster', sans-serif;
     --window-bg: url('../assets/theme/bloodred2noise.webp');
     --header-bg: url('../assets/fond/fond_drip.webp') #8B0000;
-    --header-blend: color-dodge;
+    --header-blend: overlay;
+    --header-size: 850px 300px;
     --input-bg: maroon;
     --block-bg: rgba(128,0,0,0.5);
     --power-bg: url('../assets/fond/fond_drip.webp') #8B0000;
@@ -10757,7 +10761,7 @@ section#compendium > header:first-of-type:before {
     --font-family: 'Bebas Neue', sans-serif;
     --window-bg: url('../assets/theme/bloodrednoise.webp');
     --header-bg: url('../assets/fond/fond_drip.webp') #8B0000;
-    --header-blend: color-dodge;
+    --header-blend: overlay;
     --input-bg: maroon;
     --block-bg: rgba(128,0,0,0.5);
     --power-bg: url('../assets/fond/fond_drip.webp') #8B0000;
@@ -10768,11 +10772,11 @@ section#compendium > header:first-of-type:before {
 .window-content.green {
     --font-family: 'Big Noodle Titling', sans-serif;
     --window-bg: url('../assets/theme/darkgreennoise.webp');
-    --header-bg: #003200;
-    --header-blend: color-dodge;
+    --header-bg: url('../assets/fond/fond_silverstorm.webp') #003200;
+    --header-blend: overlay;
     --input-bg: darkgreen;
     --block-bg: rgba(128,255,128,0.5);
-    --power-bg: url('../assets/fond.webp') #003200;
+    --power-bg: url('../assets/fond/fond_silverstorm.webp') #003200;
     --power-text-shadow: 2px 2px 0px #006400, 1px 1px 0px #364438;
     --power-text-blend: color-burn;
     --expanded-bg: #004400;
@@ -10784,7 +10788,7 @@ section#compendium > header:first-of-type:before {
     --font-family: 'Big Noodle Titling', sans-serif;
     --window-bg: url('../assets/theme/americanbluenoise.webp');
     --header-bg: url('../assets/fond/fond_starsstagger.webp') #0A3161;
-    --header-blend: color-dodge;
+    --header-blend: overlay;
     --input-bg: darkblue;
     --block-bg: rgba(128,128,255,0.5);
     --power-bg: url('../assets/fond/fond_starsstagger.webp') #0A3161;
@@ -10796,11 +10800,11 @@ section#compendium > header:first-of-type:before {
 .window-content.techblue2 {
     --font-family: 'Tektur', sans-serif;
     --window-bg: url('../assets/theme/darkbluenoise.webp');
-    --header-bg: url('../assets/fond/fond_Meteor.webp') #000080;
-    --header-blend: color-dodge;
+    --header-bg: url('../assets/fond/fond_molecular.webp') #000080;
+    --header-blend: overlay;
     --input-bg: navy;
     --block-bg: rgba(0,0,128,0.5);
-    --power-bg: url('../assets/fond/fond_Meteor.webp') #000080;
+    --power-bg: url('../assets/fond/fond_molecular.webp') #000080;
     --power-text-shadow: 2px 2px 0px #0000FF, 1px 1px 0px #00008C;
     --power-text-blend: screen;
 }
@@ -10810,7 +10814,7 @@ section#compendium > header:first-of-type:before {
     --font-family: 'Goldman', sans-serif;
     --window-bg: url('../assets/theme/darkbluenoise.webp');
     --header-bg: url('../assets/fond/fond_cubic.webp') #000080;
-    --header-blend: color-dodge;
+    --header-blend: overlay;
     --input-bg: navy;
     --block-bg: rgba(0,0,128,0.5);
     --power-bg: url('../assets/fond/fond_cubic.webp') #000080;

@@ -263,6 +263,9 @@ export const RegisterHandlebars = function () {
         Handlebars.registerHelper('listtheme', function() {
         return CONFIG.MM3.sheetTheme;
     });
+         Handlebars.registerHelper('overleyType', function() {
+        return CONFIG.MM3.overleyType;
+    });
 
     Handlebars.registerHelper('listfont', function() {
         return foundry.utils.mergeObject({

@@ -395,4 +395,9 @@ MM3.sheetTheme = {
     "cosmicblue": "MM3.THEME.cosmicblue",
     "starburst": "MM3.THEME.starburst",
     "matrixblack": "MM3.THEME.matrixblack"
+};
+MM3.overleyType = {
+    "default" : "MM3.THEME.default",
+    "screen" : "MM3.THEME.screen",
+    "overlay" : "MM3.THEME.overley"
 }

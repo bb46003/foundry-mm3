@@ -38,6 +38,14 @@
                     </select>
                 </label>
             </div>
+            <div class="innerBlock accessibilityFont">
+                <label>
+                    <span>{{localize "MM3.THEME.overlayType"}}</span>
+                    <select name="system.overlayType">
+                        {{selectOptions (overleyType) selected=systemData.overlayType localize=true}}
+                    </select>
+                </label>
+            </div>
         </div>
 
         {{#if (isOwner this)}}

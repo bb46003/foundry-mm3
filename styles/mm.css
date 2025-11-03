@@ -10659,11 +10659,16 @@ section#compendium > header:first-of-type:before {
 }
 
 /* Rolls */
-.window-content.theme-base div.caracteristiques div.inner a.roll,
-.window-content.theme-base div.pouvoirs a.item-create,
+.window-content.theme-base  a,
 .window-content.theme-base div.caracteristiques a.resetStrategie,
 .window-content.theme-base div.options a.btnAbs,
-.window-content.theme-base div.totalpp a.btnOC {
+.window-content.theme-base div.totalpp a.btnOC,
+.window-content.theme-base div.pouvoirs a.item-create,
+.window-content.theme-base a.rollPwr.oneRoll.draggable,
+.window-content.theme-base a.str,
+.window-content.theme-base a.btn.selectspeed,
+.window-content.theme-base a.sendInfos,
+.window-content.theme-base div.caracteristiques div.inner a.roll{
     background-image: var(--button-bg, linear-gradient(180deg, black, #e6e6e6)) !important;
     color: var(--text-color, white) !important;
     font-family: var(--font-family, sans-serif) !important;
@@ -10804,4 +10809,39 @@ section#compendium > header:first-of-type:before {
     --power-bg: url('../assets/fond/fond_cubic.webp') #000080;
     --power-text-shadow: 2px 2px 0px #0000FF, 1px 1px 0px #00008C;
     --power-text-blend: screen;
+}
+/* ===== Cosmic Blue Theme ===== */
+.window-content.cosmicblue {
+  --font-family: 'Big Noodle Titling', sans-serif;
+  --text-color: #FFFFFF;
+  --window-bg: url('../assets/theme/darkerbluenoise.webp');
+  --header-bg: url('../assets/fond/fond_cosmic1.webp') #000016;
+  --header-blend: screen;
+  --input-bg: midnightblue;
+  --input-text: #FFFFFF;
+  /*--select-bg: rgba(128, 128, 255, 0.5)*/
+  --select-option-bg: #000016;
+  --select-option-text: #FFFFFF;
+  --block-bg: rgba(128, 128, 255, 0.5);
+  --power-bg: url('../assets/fond/fond_cosmic1.webp') #000016;
+  --power-blend: screen;
+  --power-text-shadow: 2px 2px 0px #000016, 1px 1px 0px #363644;
+  --button-gradient: linear-gradient(180deg, midnightblue, #e6e6e6);
+  --button-text: #FFFFFF;
+  --button-border: #666;
+  --link-color: #FFFFFF;
+  --accent-border: 1px solid #0000FF;
+  --highlight: #0000FF;
+  --transition-speed: 0.3s;
+}
+/* Starburst Theme */
+.window-content.starburst {
+    --font-family: 'Big Noodle Titling', sans-serif;
+    --window-bg: url('../assets/theme/darkerbluenoise.webp');
+    --header-bg: url('../assets/fond/fond_starburst.webp') #000016;
+    --header-blend: screen;
+    --input-bg: midnightblue;
+    --block-bg: rgba(128, 128, 255, 0.5);
+    --power-bg: url('../assets/fond/fond_starburst.webp') #000016;
+    --power-text-shadow: 2px 2px 0px #000016, 1px 1px 0px #363644;
 }

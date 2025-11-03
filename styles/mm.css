@@ -10595,1104 +10595,213 @@ section#compendium > header:first-of-type:before {
   pointer-events: all;
 }
 
-/* Only apply when window-content has 'green' class */
-.window-content.green {
-
-    /* App window */
-    color: white !important;
-    background-image: url('../assets/theme/darkgreennoise.webp') !important;
+/* Base theme: shared rules using CSS variables */
+.window-content.theme-base {
+    color: var(--text-color, white) !important;
+    background-image: var(--window-bg, none) !important;
     background-repeat: repeat !important;
-    font-family: 'Big Noodle Titling', sans-serif;
+    font-family: var(--font-family, sans-serif) !important;
+
+    /* Sheet header */
+}
+.window-content.theme-base .sheet-header,
+.window-content.theme-base .mainName,
+.window-content.theme-base .header.blue {
+    background: var(--header-bg, none) !important;
+    background-blend-mode: var(--header-blend, unset) !important;
+    font-family: var(--font-family, sans-serif) !important;
 }
 
-/* Sheet header */
-.window-content.green .sheet-header,.window-content.green .mainName, .window-content.window-content.green .header.blue  {
-    background-color: #003200 !important;
-    background-blend-mode: color-dodge !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-.window-content.window-content.green .header.blue input, .window-content.window-content.green .header.blue select{
-  font-family: 'Big Noodle Titling', sans-serif;
+.window-content.theme-base .header.blue input,
+.window-content.theme-base .header.blue select {
+    font-family: var(--header-font, var(--font-family, sans-serif)) !important;
 }
 
 /* Inputs and spans in header */
-.window-content.green .sheet-header input,
-.window-content.green .switchIdentite {
-    color: white !important;
-    background: darkgreen !important;
-    font-family: 'Big Noodle Titling', sans-serif;
+.window-content.theme-base .sheet-header input,
+.window-content.theme-base .switchIdentite {
+    color: var(--text-color, white) !important;
+    background: var(--input-bg, black) !important;
+    font-family: var(--font-family, sans-serif) !important;
 }
 
 /* Hero and identite blocks */
-.window-content.green .hero,
-.window-content.green .identite {
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Generic spans */
-.window-content.green span {
-    font-family: 'Big Noodle Titling', sans-serif;
+.window-content.theme-base .hero,
+.window-content.theme-base .identite,
+.window-content.theme-base span {
+    font-family: var(--font-family, sans-serif) !important;
 }
 
 /* Header blocks */
-.window-content.green .sheet-header .block {
-    background: rgba(128, 255, 128, 0.5) !important;
-    font-family: 'Big Noodle Titling', sans-serif;
+.window-content.theme-base .sheet-header .block {
+    background: var(--block-bg, rgba(64,64,64,0.5)) !important;
+    font-family: var(--font-family, sans-serif) !important;
 }
 
 /* Powers */
-.window-content.green div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
-.window-content.green div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-    background: url('../assets/fond.webp') #003200 !important;
-    font-family: 'Big Noodle Titling', sans-serif;
+.window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
+.window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
+    background: var(--power-bg, none) !important;
+    font-family: var(--font-family, sans-serif) !important;
 }
 
 /* Powers header text */
-.window-content.green div.pouvoirs div.lPouvoirs div.pwr span.header {
-    text-shadow: 2px 2px 0px #006400, 1px 1px 0px #364438 !important;
-    background-blend-mode: color-burn !important;
-    font-family: 'Big Noodle Titling', sans-serif;
+.window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr span.header {
+    text-shadow: var(--power-text-shadow, 2px 2px 0px #222, 1px 1px 0px #363636) !important;
+    background-blend-mode: var(--power-text-blend, screen) !important;
+    font-family: var(--font-family, sans-serif) !important;
 }
 
 /* Tabs */
-.window-content.green section.sheet-body nav.tabs a {
-    color: white !important;
-    font-family: 'Big Noodle Titling', sans-serif;
+.window-content.theme-base section.sheet-body nav.tabs a {
+    color: var(--text-color, white) !important;
+    font-family: var(--font-family, sans-serif) !important;
 }
 
 /* Rolls */
-.window-content.green div.caracteristiques div.inner a.roll {
-    background-image: linear-gradient(180deg, darkgreen, #e6e6e6) !important;
-    color: #FFFFFF !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Item create buttons */
-.window-content.green div.pouvoirs a.item-create {
-    background-image: linear-gradient(180deg, black, #e6e6e6) !important;
-    border-bottom-color: #666 !important;
-    color: #FFFFFF !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Resets and buttons */
-.window-content.green div.caracteristiques a.resetStrategie,
-.window-content.green div.options a.btnAbs,
-.window-content.green div.totalpp a.btnOC {
-    background-image: linear-gradient(180deg, darkgreen, #e6e6e6) !important;
-    color: #FFFFFF !important;
-    font-family: 'Big Noodle Titling', sans-serif;
+.window-content.theme-base div.caracteristiques div.inner a.roll,
+.window-content.theme-base div.pouvoirs a.item-create,
+.window-content.theme-base div.caracteristiques a.resetStrategie,
+.window-content.theme-base div.options a.btnAbs,
+.window-content.theme-base div.totalpp a.btnOC {
+    background-image: var(--button-bg, linear-gradient(180deg, black, #e6e6e6)) !important;
+    color: var(--text-color, white) !important;
+    font-family: var(--font-family, sans-serif) !important;
+    border-bottom-color: var(--button-border, #666) !important;
 }
 
 /* Selects */
-.window-content.green select {
-    background: rgba(0, 64, 0, 0.8) !important;
+.window-content.theme-base select {
+    background: var(--select-bg, rgba(22,22,22,0.8)) !important;
 }
-
-.window-content.green select option {
-  background: #003200 !important;
-  color: white !important;
+.window-content.theme-base select option {
+    background: var(--select-option-bg, black) !important;
+    color: var(--text-color, white) !important;
 }
-
-.window-content.green div.pouvoirs div.lPouvoirs select.link {
-    color: #EBEBEB !important;
-    border-bottom: 1px solid #FF0000 !important;
-    background: #003200 !important;
-    font-family: 'Big Noodle Titling', sans-serif;
+.window-content.theme-base div.pouvoirs div.lPouvoirs select.link {
+    color: var(--link-color, #EBEBEB) !important;
+    border-bottom: 1px solid var(--link-border, black) !important;
+    background: var(--link-bg, black) !important;
+    font-family: var(--font-family, sans-serif) !important;
 }
 
 /* Textareas */
-.window-content.green textarea {
-    color: white !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Sheet body inputs */
-.window-content.green .sheet-body input {
-    background: #003200 !important;
-    color: white !important;
-    font-family: 'Big Noodle Titling', sans-serif;
+.window-content.theme-base textarea,
+.window-content.theme-base .sheet-body input {
+    color: var(--text-color, white) !important;
+    background: var(--input-bg, black) !important;
+    font-family: var(--font-family, sans-serif) !important;
 }
 
 /* Expand/collapse powers */
-.window-content.green div.pouvoirs div.lPouvoirs div.pwr {
+.window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr {
     transition: background-color 0.3s, color 0.3s !important;
 }
-
-.window-content.green div.pouvoirs div.lPouvoirs div.pwr.expanded {
-    background-color: #004400 !important; /* darker green when expanded */
-    color: #FFFF99 !important;             /* light yellow text */
-}
-.window-content.green a{
-    color: white !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-
-}
-.window-content.green .btnOC a{
-  background-image: linear-gradient(180deg, darkgreen, #e6e6e6) !important;
-}
- /* App window */
-.window-content.freedomcity {
-        /* App window */
-        color: white !important;
-        background-image: url('../assets/theme/americanbluenoise.webp') !important;
-        background-repeat: repeat !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Sheet header */
-.window-content.freedomcity .sheet-header,.window-content.freedomcity .mainName, .window-content.window-content.freedomcity .header.blue {
-        background-blend-mode: color-dodge !important;
-        background: url('../assets/fond/fond_starsstagger.webp') #0A3161 !important;
-        font-family: 'Big Noodle Titling', sans-serif;
+.window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr.expanded {
+    background-color: var(--expanded-bg, black) !important;
+    color: var(--expanded-text, white) !important;
 }
 
-.window-content.window-content.freedomcity .header.blue input, .window-content.window-content.freedomcity .header.blue select{
-   font-family: 'Bebas Neue', sans-serif;
-}
-/* Inputs and spans in header */
-.window-content.freedomcity .sheet-header input,
-.window-content.freedomcity .switchIdentite {
-        color: white !important;
-        background: darkblue !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Hero and identite blocks */
-.window-content.freedomcity .hero,
-.window-content.freedomcity .identite {
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Generic spans */
-.window-content.freedomcity span {
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Header blocks */
-.window-content.freedomcity .sheet-header .block {
-        background: rgba(128, 128, 255, 0.5) !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Powers */
-.window-content.freedomcity div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
-.window-content.freedomcity div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-        background: url('../assets/fond/fond_starsstagger.webp') #0A3161 !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Powers header text */
-.window-content.freedomcity div.pouvoirs div.lPouvoirs div.pwr span.header {
-        text-shadow: 2px 2px 0px #000064, 1px 1px 0px #363644 !important;
-        background-blend-mode: color-burn !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Tabs */
-.window-content.freedomcity section.sheet-body nav.tabs a {
-        color: white !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Rolls */
-.window-content.freedomcity div.caracteristiques div.inner a.roll {
-        background-image: linear-gradient(180deg, darkblue, #e6e6e6) !important;
-        color: #FFFFFF !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Item create buttons */
-.window-content.freedomcity div.pouvoirs a.item-create {
-        background-image: linear-gradient(180deg, darkblue, #e6e6e6) !important;
-        border-bottom-color: #666 !important;
-        color: #FFFFFF !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Resets and buttons */
-.window-content.freedomcity div.caracteristiques a.resetStrategie,
-.window-content.freedomcity div.options a.btnAbs,
-.window-content.freedomcity div.totalpp a.btnOC {
-        background-image: linear-gradient(180deg, darkblue, #e6e6e6) !important;
-        color: #FFFFFF !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Selects */
-.window-content.freedomcity select {
-        background: rgba(0, 0, 64, 0.8) !important;
-}
-.window-content.freedomcity select option {
-      background: #0A3161 !important;
-      color: white !important;
-}
-.window-content.freedomcity div.pouvoirs div.lPouvoirs select.link {
-        color: #EBEBEB !important;
-        border-bottom: 1px solid #0000ff !important;
-        background: #0A3161 !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Textareas */
-.window-content.freedomcity textarea {
-        color: white !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Sheet body inputs */
-.window-content.freedomcity .sheet-body input {
-        background: #0A3161 !important;
-        color: white !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Expand/collapse powers */
-.window-content.freedomcity div.pouvoirs div.lPouvoirs div.pwr {
-        transition: background-color 0.3s, color 0.3s !important;
-}
-.window-content.freedomcity div.pouvoirs div.lPouvoirs div.pwr.expanded {
-        background-color: #000044 !important; /* darker blue when expanded */
-        color: #FFFFFF !important;             /* white text */
-}
-.window-content.freedomcity a{
-        color: white !important;
-        font-family: 'Big Noodle Titling', sans-serif;
-}
-.window-content.freedomcity .btnOC a{
-      background-image: linear-gradient(180deg, darkblue, #e6e6e6) !important;
-}
- /* App window */
-.window-content.techblue2 { 
-    color: white !important;
-    background-image: url('../assets/theme/darkbluenoise.webp') !important;
-    background-repeat: repeat !important;
-    font-family: 'Tektur', sans-serif;
-}
-/* Sheet header */
-.window-content.techblue2 .sheet-header,.window-content.techblue2 .mainName, .window-content.window-content.freetechblueomcity .header.blue  {
-    background: url('../assets/fond/fond_Meteor.webp') #000080 !important;
-    background-blend-mode: color-dodge !important;
-    font-family: 'Tektur', sans-serif;
-}
-.window-content.window-content.techblue2 .header.blue input, .window-content.window-content.techblue2 .header.blue select{
-  font-family: 'Tektur', sans-serif;
-}
-/* Inputs and spans in header */
-.window-content.techblue2 .sheet-header input,
-.window-content.techblue2 .switchIdentite {
-    color: white !important;
-    background: navyit !important;
-    font-family: 'Tektur', sans-serif;
-}
-/* Hero and identite blocks */
-.window-content.techblue2 .hero,
-.window-content.techblue2 .identite {
-    font-family: 'Tektur', sans-serif;
-}
-/* Generic spans */
-.window-content.techblue2 span {
-    font-family: 'Tektur', sans-serif;
-}
-/* Header blocks */
-.window-content.techblue2 .sheet-header .block {
-    background: rgba(0, 0, 128, 0.5) !important;
-    font-family: 'Tektur', sans-serif;
-}
-/* Powers */
-.window-content.techblue2 div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
-.window-content.techblue2 div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-    background: url('../assets/fond/fond_Meteor.webp') #000080 !important;
-    font-family: 'Tektur', sans-serif;
-}
-/* Powers header text */
-.window-content.techblue2 div.pouvoirs div.lPouvoirs div.pwr span.header {
-    text-shadow: 2px 2px 0px #0000FF, 1px 1px 0px #00008C !important;
-    background-blend-mode: screen !important;
-    font-family: 'Tektur', sans-serif;
-}
-/* Tabs */
-.window-content.techblue2 section.sheet-body nav.tabs a {
-    color: white !important;
-    font-family: 'Tektur', sans-serif;
-}
-/* Rolls */
-.window-content.techblue2 div.caracteristiques div.inner a.roll {
-    background-image: linear-gradient(180deg, navyit, #e6e6e6) !important;
-    color: #FFFFFF !important;
-    font-family: 'Tektur', sans-serif;
-}
-/* Item create buttons */
-.window-content.techblue2 div.pouvoirs a.item-create {
-    background-image: linear-gradient(180deg, navyit, #e6e6e6) !important;
-    border-bottom-color: #666 !important;
-    color: #FFFFFF !important;
-    font-family: 'Tektur', sans-serif;
-}
-/* Resets and buttons */
-.window-content.techblue2 div.caracteristiques a.resetStrategie,
-.window-content.techblue2 div.options a.btnAbs,
-.window-content.techblue2 div.totalpp a.btnOC {
-    background-image: linear-gradient(180deg, navyit, #e6e6e6) !important;
-    color: #FFFFFF !important;
-    font-family: 'Tektur', sans-serif;
-}
-/* Selects */
-.window-content.techblue2 select {
-    background: rgba(0, 0, 128, 0.5) !important;
-}
-.window-content.techblue2 select option {
-  background: #000080 !important;
-  color: white !important;
-}
-.window-content.techblue2 div.pouvoirs div.lPouvoirs select.link {
-    color: #EBEBEB !important;
-    border-bottom: 1px solid #000000 !important;
-    background: #000080 !important;
-    font-family: 'Tektur', sans-serif;
-}
-/* Textareas */
-.window-content.techblue2 textarea {
-    color: white !important;
-    font-family: 'Tektur', sans-serif;
-}
-/* Sheet body inputs */
-.window-content.techblue2 .sheet-body input {
-    background: #000080 !important;
-    color: white !important;
-    font-family: 'Tektur', sans-serif;
-}
-/* Expand/collapse powers */
-.window-content.techblue2 div.pouvoirs div.lPouvoirs div.pwr {
-    transition: background-color 0.3s, color 0.3s !important;
-}
-.window-content.techblue2 div.pouvoirs div.lPouvoirs div.pwr.expanded {
-    background-color: #000080 !important; /* navyit when expanded */
-    color: #FFFFFF !important;             /* white text */
-}
-.window-content.techblue2 a{
-    color: white !important;
-    font-family: 'Tektur', sans-serif;
-}
-.window-content.techblue2 .btnOC a{
-  background-image: linear-gradient(180deg, navyit, #e6e6e6) !important;
-}
-.window-content.techblue {
-        /* App window */
-        color: white !important;
-        background-image: url('../assets/theme/darkbluenoise.webp') !important;
-        background-repeat: repeat !important;
-        font-family: 'Goldman', sans-serif;
-}
-/* Sheet header */
-.window-content.techblue .sheet-header,.window-content.techblue .mainName, .window-content.window-content.techblue .header.blue {
-        background: url('../assets/fond/fond_cubic.webp') #000080 !important;
-        background-blend-mode: color-dodge !important;
-        font-family: 'Goldman', sans-serif;
-}
-.window-content.window-content.techblue .header.blue input, .window-content.window-content.techblue .header.blue select{
-  font-family: 'Goldman', sans-serif;
-}
-/* Inputs and spans in header */
-.window-content.techblue .sheet-header input,
-.window-content.techblue .switchIdentite {
-        color: white !important;
-        background: navyit !important;
-        font-family: 'Goldman', sans-serif;
-}
-/* Hero and identite blocks */
-.window-content.techblue .hero,
-.window-content.techblue .identite {
-        font-family: 'Goldman', sans-serif;
-}
-/* Generic spans */
-.window-content.techblue span {
-        font-family: 'Goldman', sans-serif;
-}
-/* Header blocks */
-.window-content.techblue .sheet-header .block {
-        background: rgba(0, 0, 128, 0.5) !important;
-        font-family: 'Goldman', sans-serif;
-}
-/* Powers */
-.window-content.techblue div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
-.window-content.techblue div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-        background: url('../assets/fond/fond_cubic.webp') #000080 !important;
-        font-family: 'Goldman', sans-serif;
-}
-/* Powers header text */
-.window-content.techblue div.pouvoirs div.lPouvoirs div.pwr span.header {
-        text-shadow: 2px 2px 0px #0000FF, 1px 1px 0px #00008C !important;
-        background-blend-mode: screen !important;
-        font-family: 'Goldman', sans-serif;
-}
-/* Tabs */
-.window-content.techblue section.sheet-body nav.tabs a {
-        color: white !important;
-        font-family: 'Goldman', sans-serif;
-}
-/* Rolls */
-.window-content.techblue div.caracteristiques div.inner a.roll {
-        background-image: linear-gradient(180deg, navyit, #e6e6e6) !important;
-        color: #FFFFFF !important;
-        font-family: 'Goldman', sans-serif;
-}
-/* Item create buttons */
-.window-content.techblue div.pouvoirs a.item-create {
-        background-image: linear-gradient(180deg, navyit, #e6e6e6) !important;
-        border-bottom-color: #666 !important;
-        color: #FFFFFF !important;
-        font-family: 'Goldman', sans-serif;
-}
-/* Resets and buttons */
-.window-content.techblue div.caracteristiques a.resetStrategie,
-.window-content.techblue div.options a.btnAbs,
-.window-content.techblue div.totalpp a.btnOC {
-        background-image: linear-gradient(180deg, navyit, #e6e6e6) !important;
-        color: #FFFFFF !important;
-        font-family: 'Goldman', sans-serif;
-}
-/* Selects */
-.window-content.techblue select {
-        background: rgba(0, 0, 128, 0.5) !important;
-}
-.window-content.techblue select option {
-      background: #000080 !important;
-      color: white !important;
-}
-.window-content.techblue div.pouvoirs div.lPouvoirs select.link {
-        color: #EBEBEB !important;
-        border-bottom: 1px solid #000000 !important;
-        background: #000080 !important;
-        font-family: 'Goldman', sans-serif;
-}
-/* Textareas */
-.window-content.techblue textarea {
-        color: white !important;
-        font-family: 'Goldman', sans-serif;
-}
-/* Sheet body inputs */
-.window-content.techblue .sheet-body input {
-        background: #000080 !important;
-        color: white !important;
-        font-family: 'Goldman', sans-serif;
-}
-/* Expand/collapse powers */
-.window-content.techblue div.pouvoirs div.lPouvoirs div.pwr {
-        transition: background-color 0.3s, color 0.3s !important;
-}
-.window-content.techblue div.pouvoirs div.lPouvoirs div.pwr.expanded {
-        background-color: #000080 !important; /* navyit when expanded */
-        color: #FFFFFF !important;             /* white text */
-}
-.window-content.techblue a{
-        color: white !important;
-        font-family: 'Goldman', sans-serif;
-}
-.window-content.techblue .btnOC a{
-      background-image: linear-gradient(180deg, navyit, #e6e6e6) !important;
-}
-.window-content.bloodred {
-        /* App window */
-        color: white !important;
-        background-image: url('../assets/theme/bloodrednoise.webp') !important;
-        background-repeat: repeat !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Sheet header */
-.window-content.bloodred .sheet-header,.window-content.bloodred .mainName, .window-content.window-content.bloodred .header.blue { 
-        background: url('../assets/fond/fond_drip.webp') #8B0000 !important;
-        background-blend-mode: color-dodge !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-.window-content.window-content.bloodred .header.blue input, .window-content.window-content.bloodred .header.blue select{
-   font-family: 'Bebas Neue', sans-serif;
-}
-/* Inputs and spans in header */
-.window-content.bloodred .sheet-header input,
-.window-content.bloodred .switchIdentite {
-        color: white !important;
-        background: maroon !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Hero and identite blocks */
-.window-content.bloodred .hero,
-.window-content.bloodred .identite {
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Generic spans */
-.window-content.bloodred span {
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Header blocks */
-.window-content.bloodred .sheet-header .block {
-        background: rgba(128, 0, 0, 0.5) !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Powers */
-.window-content.bloodred div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
-.window-content.bloodred div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-        background: url('../assets/fond/fond_drip.webp') #8B0000 !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Powers header text */
-.window-content.bloodred div.pouvoirs div.lPouvoirs div.pwr span.header {
-        text-shadow: 2px 2px 0px #8B0000, 1px 1px 0px #FF0000 !important;
-        background-blend-mode: screen !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Tabs */
-.window-content.bloodred section.sheet-body nav.tabs a {
-        color: white !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Rolls */
-.window-content.bloodred div.caracteristiques div.inner a.roll {
-        background-image: linear-gradient(180deg, maroon, #e6e6e6) !important;
-        color: #FFFFFF !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Item create buttons */
-.window-content.bloodred div.pouvoirs a.item-create {
-        background-image: linear-gradient(180deg, maroon, #e6e6e6) !important;
-        border-bottom-color: #666 !important;
-        color: #FFFFFF !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Resets and buttons */
-.window-content.bloodred div.caracteristiques a.resetStrategie,
-.window-content.bloodred div.options a.btnAbs,
-.window-content.bloodred div.totalpp a.btnOC {
-        background-image: linear-gradient(180deg, maroon, #e6e6e6) !important;
-        color: #FFFFFF !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Selects */
-.window-content.bloodred select {
-        background: rgba(128, 0, 0, 0.5) !important;
-}
-.window-content.bloodred select option {
-      background: #800000 !important;
-      color: white !important;
-}
-.window-content.bloodred div.pouvoirs div.lPouvoirs select.link {
-        color: #EBEBEB !important;
-        border-bottom: 1px solid #800000 !important;
-        background: #800000 !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Textareas */
-.window-content.bloodred textarea {
-        color: white !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Sheet body inputs */
-.window-content.bloodred .sheet-body input {
-        background: #800000 !important;
-        color: white !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-/* Expand/collapse powers */
-.window-content.bloodred div.pouvoirs div.lPouvoirs div.pwr {
-        transition: background-color 0.3s, color 0.3s !important;
-}
-.window-content.bloodred div.pouvoirs div.lPouvoirs div.pwr.expanded {
-        background-color: #800000 !important; /* maroon when expanded */
-        color: #FFFFFF !important;             /* white text */
-}
-.window-content.bloodred a{
-        color: white !important;
-        font-family: 'Bebas Neue', sans-serif;
-}
-.window-content.bloodred .btnOC a{
-      background-image: linear-gradient(180deg, maroon, #e6e6e6) !important;
-}
-.window-content.bloodred2 {
-        /* App window */
-        color: white !important;
-        background-image: url('../assets/theme/bloodred2noise.webp') !important;
-        background-repeat: repeat !important;
-        font-family: 'Creepster', sans-serif;
-}
-/* Sheet header */
-.window-content.bloodred2 .sheet-header,.window-content.bloodred2 .mainName, .window-content.window-content.bloodred2 .header.blue {
-        background-blend-mode: color-dodge !important;
-        font-family: 'Creepster', sans-serif;
-        background: url('../assets/fond/fond_drip.webp') #8B0000 !important;
-}
-.window-content.window-content.bloodred2 .header.blue input, .window-content.window-content.bloodred2 .header.blue select{
-    font-family: 'Creepster', sans-serif;
+/* Links */
+.window-content.theme-base a {
+    color: var(--text-color, white) !important;
+    font-family: var(--font-family, sans-serif) !important;
 }
 
-/* Inputs and spans in header */
-.window-content.bloodred2 .sheet-header input,
-.window-content.bloodred2 .switchIdentite {
-        color: white !important;
-        background: maroon !important;
-        font-family: 'Creepster', sans-serif;
+/* Buttons like btnOC */
+.window-content.theme-base .btnOC a {
+    background-image: var(--button-bg, linear-gradient(180deg, black, #e6e6e6)) !important;
 }
-/* Hero and identite blocks */
-.window-content.bloodred2 .hero,
-.window-content.bloodred2 .identite {
-        font-family: 'Creepster', sans-serif;
-}
-/* Generic spans */
-.window-content.bloodred2 span {
-        font-family: 'Creepster', sans-serif;
-}
-/* Header blocks */
-.window-content.bloodred2 .sheet-header .block {
-        background: rgba(128, 0, 0, 0.5) !important;
-        font-family: 'Creepster', sans-serif;
-}
-/* Powers */
-.window-content.bloodred2 div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
-.window-content.bloodred2 div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-        background: url('../assets/fond/fond_drip.webp') #8B0000 !important;
-        font-family: 'Creepster', sans-serif;
-}
-/* Powers header text */
-.window-content.bloodred2 div.pouvoirs div.lPouvoirs div.pwr span.header {
-        text-shadow: 2px 2px 0px #8B0000, 1px 1px 0px #FF0000 !important;
-        background-blend-mode: screen !important;
-        font-family: 'Creepster', sans-serif;
-}
-/* Tabs */
-.window-content.bloodred2 section.sheet-body nav.tabs a {
-        color: white !important;
-        font-family: 'Creepster', sans-serif;
-}
-/* Rolls */
-.window-content.bloodred2 div.caracteristiques div.inner a.roll {
-        background-image: linear-gradient(180deg, maroon, #e6e6e6) !important;
-        color: #FFFFFF !important;
-        font-family: 'Creepster', sans-serif;
-}
-/* Item create buttons */
-.window-content.bloodred2 div.pouvoirs a.item-create {
-        background-image: linear-gradient(180deg, maroon, #e6e6e6) !important;
-        border-bottom-color: #666 !important;
-        color: #FFFFFF !important;
-        font-family: 'Creepster', sans-serif;
-}
-/* Resets and buttons */
-.window-content.bloodred2 div.caracteristiques a.resetStrategie,
-.window-content.bloodred2 div.options a.btnAbs,
-.window-content.bloodred2 div.totalpp a.btnOC {
-        background-image: linear-gradient(180deg, maroon, #e6e6e6) !important;
-        color: #FFFFFF !important;
-        font-family: 'Creepster', sans-serif;
-}
-/* Selects */
-.window-content.bloodred2 select {
-        background: rgba(128, 0, 0, 0.5) !important;
-}
-.window-content.bloodred2 select option {
-      background: #800000 !important;
-      color: white !important;
-}
-.window-content.bloodred2 div.pouvoirs div.lPouvoirs select.link {
-        color: #EBEBEB !important;
-        border-bottom: 1px solid #800000 !important;
-        background: #800000 !important;
-        font-family: 'Creepster', sans-serif;
-}
-/* Textareas */
-.window-content.bloodred2 textarea {
-        color: white !important;
-        font-family: 'Creepster', sans-serif;
-}
-/* Sheet body inputs */
-.window-content.bloodred2 .sheet-body input {
-        background: #800000 !important;
-        color: white !important;
-        font-family: 'Creepster', sans-serif;
-}
-/* Expand/collapse powers */
-.window-content.bloodred2 div.pouvoirs div.lPouvoirs div.pwr {
-        transition: background-color 0.3s, color 0.3s !important;
-}
-.window-content.bloodred2 div.pouvoirs div.lPouvoirs div.pwr.expanded {
-        background-color: #800000 !important; /* maroon when expanded */
-        color: #FFFFFF !important;             /* white text */
-}
-.window-content.bloodred2 a{
-        color: white !important;
-        font-family: 'Creepster', sans-serif;
-}
-.window-content.bloodred2 .btnOC a{
-      background-image: linear-gradient(180deg, maroon, #e6e6e6) !important;
-}
+
+/* === Theme-specific overrides === */
+
+/* Goth Black Theme */
 .window-content.gothblack {
-        /* App window */
-        color: white !important;
-        background-image: url('../assets/theme/blacknoise.webp') !important;
-        background-repeat: repeat !important;
-        font-family: 'Pirata One', sans-serif;
-}
-/* Sheet header */
-.window-content.gothblack .sheet-header,.window-content.gothblack .mainName, .window-content.window-content.gothblack .header.blue {
-        background: url('../assets/fond/fond_skulls.webp') #000000 !important;
-        background-blend-mode: unset !important;
-        font-family: 'Pirata One', sans-serif;
+    --font-family: 'Pirata One', sans-serif;
+    --window-bg: url('../assets/theme/blacknoise.webp');
+    --header-bg: url('../assets/fond/fond_skulls.webp') #000016;
+    --header-blend: unset;
+    --input-bg: black;
+    --block-bg: rgba(64,64,64,0.5);
+    --power-bg: url('../assets/fond/fond_skulls.webp') #000000;
+    --power-text-shadow: 2px 2px 0px #222, 1px 1px 0px #363636;
+    --power-text-blend: screen;
 }
 
-.window-content.window-content.gothblack .header.blue input, .window-content.window-content.gothblack .header.blue select{
-   font-family: 'Bebas Neue', sans-serif;
-}
-/* Inputs and spans in header */
-.window-content.gothblack .sheet-header input,
-.window-content.gothblack .switchIdentite {
-        color: white !important;
-        background: black !important;
-        font-family: 'Pirata One', sans-serif;
-}
-/* Hero and identite blocks */
-.window-content.gothblack .hero,
-.window-content.gothblack .identite {
-        font-family: 'Pirata One', sans-serif;
-}
-/* Generic spans */
-.window-content.gothblack span {
-        font-family: 'Pirata One', sans-serif;
-}
-/* Header blocks */
-.window-content.gothblack .sheet-header .block {
-        background: rgba(64, 64, 64, 0.5) !important;
-        font-family: 'Pirata One', sans-serif;
-}
-/* Powers */
-.window-content.gothblack div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
-.window-content.gothblack div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-        background: url('../assets/fond/fond_skulls.webp') #000000 !important;
-         background-blend-mode: unset !important;
-        font-family: 'Pirata One', sans-serif;
-}
-/* Powers header text */
-.window-content.gothblack div.pouvoirs div.lPouvoirs div.pwr span.header {
-        text-shadow: 2px 2px 0px #222222, 1px 1px 0px #363636 !important;
-        background-blend-mode: screen !important;
-        font-family: 'Pirata One', sans-serif;
-}
-/* Tabs */
-.window-content.gothblack section.sheet-body nav.tabs a {
-        color: white !important;
-        font-family: 'Pirata One', sans-serif;
-}
-/* Rolls */
-.window-content.gothblack div.caracteristiques div.inner a.roll {
-        background-image: linear-gradient(180deg, black, #e6e6e6) !important;
-        color: #FFFFFF !important;
-        font-family: 'Pirata One', sans-serif;
-}
-/* Item create buttons */
-.window-content.gothblack div.pouvoirs a.item-create {
-        background-image: linear-gradient(180deg, black, #e6e6e6) !important;
-        border-bottom-color: #666 !important;
-        color: #FFFFFF !important;
-        font-family: 'Pirata One', sans-serif;
-}
-/* Resets and buttons */
-.window-content.gothblack div.caracteristiques a.resetStrategie,
-.window-content.gothblack div.options a.btnAbs,
-.window-content.gothblack div.totalpp a.btnOC {
-        background-image: linear-gradient(180deg, black, #e6e6e6) !important;
-        color: #FFFFFF !important;
-        font-family: 'Pirata One', sans-serif;
-}
-/* Selects */
-.window-content.gothblack select {
-        background: rgba(22, 22, 22, 0.8) !important;
-}
-.window-content.gothblack select option {
-      background: #000000 !important;
-      color: white !important;
-}
-.window-content.gothblack div.pouvoirs div.lPouvoirs select.link {
-        color: #EBEBEB !important;
-        border-bottom: 1px solid #000000 !important;
-        background: #000000 !important;
-        font-family: 'Pirata One', sans-serif;
-}
-/* Textareas */
-.window-content.gothblack textarea {
-        color: white !important;
-        font-family: 'Pirata One', sans-serif;
-}
-/* Sheet body inputs */
-.window-content.gothblack .sheet-body input {
-        background: #000000 !important;
-        color: white !important;
-        font-family: 'Pirata One', sans-serif;
-}
-/* Expand/collapse powers */
-.window-content.gothblack div.pouvoirs div.lPouvoirs div.pwr {
-        transition: background-color 0.3s, color 0.3s !important;
-}
-.window-content.gothblack div.pouvoirs div.lPouvoirs div.pwr.expanded {
-        background-color: #000000 !important; /* black when expanded */
-        color: #FFFFFF !important;             /* white text */
-}
-.window-content.gothblack a{
-        color: white !important;
-        font-family: 'Pirata One', sans-serif;
-}
-.window-content.gothblack .btnOC a{
-      background-image: linear-gradient(180deg, black, #e6e6e6) !important;
-}
-.window-content.cosmicblue {
-    /* App window */
-    color: white !important;
-    background-image: url('../assets/theme/darkerbluenoise.webp') !important;
-    background-repeat: repeat !important;
-    font-family: 'Big Noodle Titling', sans-serif;
+/* Blood Red 2 Theme */
+.window-content.bloodred2 {
+    --font-family: 'Creepster', sans-serif;
+    --window-bg: url('../assets/theme/bloodred2noise.webp');
+    --header-bg: url('../assets/fond/fond_drip.webp') #8B0000;
+    --header-blend: color-dodge;
+    --input-bg: maroon;
+    --block-bg: rgba(128,0,0,0.5);
+    --power-bg: url('../assets/fond/fond_drip.webp') #8B0000;
+    --power-text-shadow: 2px 2px 0px #8B0000, 1px 1px 0px #FF0000;
 }
 
-/* Sheet header */
-.window-content.cosmicblue .sheet-header,.window-content.cosmicblue .mainName, .window-content.window-content.cosmicblue .header.blue {
-    background-color: #000016 !important;
-   background: url('../assets/fond/fond_cosmic1.webp') #000016 !important;
-    background-blend-mode: screen !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-.window-content.window-content.cosmicblue .header.blue input, .window-content.window-content.cosmicblue .header.blue select{
- font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Inputs and spans in header */
-.window-content.cosmicblue .sheet-header input,
-.window-content.cosmicblue .switchIdentite {
-    color: white !important;
-    background: midnightblue !important;
-    font-family: 'Big Noodle Titling', sans-serif;
+/* Blood Red Theme */
+.window-content.bloodred {
+    --font-family: 'Bebas Neue', sans-serif;
+    --window-bg: url('../assets/theme/bloodrednoise.webp');
+    --header-bg: url('../assets/fond/fond_drip.webp') #8B0000;
+    --header-blend: color-dodge;
+    --input-bg: maroon;
+    --block-bg: rgba(128,0,0,0.5);
+    --power-bg: url('../assets/fond/fond_drip.webp') #8B0000;
+    --power-text-shadow: 2px 2px 0px #8B0000, 1px 1px 0px #FF0000;
 }
 
-/* Hero and identite blocks */
-.window-content.cosmicblue .hero,
-.window-content.cosmicblue .identite {
-    font-family: 'Big Noodle Titling', sans-serif;
+/* Green Theme */
+.window-content.green {
+    --font-family: 'Big Noodle Titling', sans-serif;
+    --window-bg: url('../assets/theme/darkgreennoise.webp');
+    --header-bg: #003200;
+    --header-blend: color-dodge;
+    --input-bg: darkgreen;
+    --block-bg: rgba(128,255,128,0.5);
+    --power-bg: url('../assets/fond.webp') #003200;
+    --power-text-shadow: 2px 2px 0px #006400, 1px 1px 0px #364438;
+    --power-text-blend: color-burn;
+    --expanded-bg: #004400;
+    --expanded-text: #FFFF99;
 }
 
-/* Generic spans */
-.window-content.cosmicblue span {
-    font-family: 'Big Noodle Titling', sans-serif;
+/* Freedom City Theme */
+.window-content.freedomcity {
+    --font-family: 'Big Noodle Titling', sans-serif;
+    --window-bg: url('../assets/theme/americanbluenoise.webp');
+    --header-bg: url('../assets/fond/fond_starsstagger.webp') #0A3161;
+    --header-blend: color-dodge;
+    --input-bg: darkblue;
+    --block-bg: rgba(128,128,255,0.5);
+    --power-bg: url('../assets/fond/fond_starsstagger.webp') #0A3161;
+    --power-text-shadow: 2px 2px 0px #000064, 1px 1px 0px #363644;
+    --power-text-blend: color-burn;
 }
 
-/* Header blocks */
-.window-content.cosmicblue .sheet-header .block {
-    background: rgba(128, 128, 255, 0.5) !important;
-    font-family: 'Big Noodle Titling', sans-serif;
+/* Tech Blue 2 Theme */
+.window-content.techblue2 {
+    --font-family: 'Tektur', sans-serif;
+    --window-bg: url('../assets/theme/darkbluenoise.webp');
+    --header-bg: url('../assets/fond/fond_Meteor.webp') #000080;
+    --header-blend: color-dodge;
+    --input-bg: navy;
+    --block-bg: rgba(0,0,128,0.5);
+    --power-bg: url('../assets/fond/fond_Meteor.webp') #000080;
+    --power-text-shadow: 2px 2px 0px #0000FF, 1px 1px 0px #00008C;
+    --power-text-blend: screen;
 }
 
-/* Powers */
-.window-content.cosmicblue div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
-.window-content.cosmicblue div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-    background: url('../assets/fond/fond_cosmic1.webp') #000016 !important;
-    background-blend-mode: screen !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Powers header text */
-.window-content.cosmicblue div.pouvoirs div.lPouvoirs div.pwr span.header {
-    text-shadow: 2px 2px 0px #000016, 1px 1px 0px #363644 !important;
-    background-blend-mode: color-burn !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Tabs */
-.window-content.cosmicblue section.sheet-body nav.tabs a {
-    color: white !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Rolls */
-.window-content.cosmicblue div.caracteristiques div.inner a.roll {
-    background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
-    color: #FFFFFF !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Item create buttons */
-.window-content.cosmicblue div.pouvoirs a.item-create {
-    background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
-    border-bottom-color: #666 !important;
-    color: #FFFFFF !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Resets and buttons */
-.window-content.cosmicblue div.caracteristiques a.resetStrategie,
-.window-content.cosmicblue div.options a.btnAbs,
-.window-content.cosmicblue div.totalpp a.btnOC {
-    background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
-    color: #FFFFFF !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Selects */
-.window-content.cosmicblue select {
-    background: rgba(0, 64, 0, 0.8) !important;
-}
-
-.window-content.cosmicblue select option {
-  background: #000016 !important;
-  color: white !important;
-}
-
-.window-content.cosmicblue div.pouvoirs div.lPouvoirs select.link {
-    color: #EBEBEB !important;
-    border-bottom: 1px solid #0000FF !important;
-    background: #000016 !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Textareas */
-.window-content.cosmicblue textarea {
-    color: white !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Sheet body inputs */
-.window-content.cosmicblue .sheet-body input {
-    background: #000016 !important;
-    color: white !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Expand/collapse powers */
-.window-content.cosmicblue div.pouvoirs div.lPouvoirs div.pwr {
-    transition: background-color 0.3s, color 0.3s !important;
-}
-
-.window-content.cosmicblue div.pouvoirs div.lPouvoirs div.pwr.expanded {
-    background-color: #000016 !important; /* midnight blue when expanded */
-    color: #FFFFFF !important;             /* white text */
-}
-.window-content.cosmicblue a{
-    color: white !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-
-}
-.window-content.cosmicblue .btnOC a{
-  background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
-}
-.window-content.starburst {
-    /* App window */
-    color: white !important;
-    background-image: url('../assets/theme/darkerbluenoise.webp') !important;
-    background-repeat: repeat !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Sheet header */
-.window-content.starburst .sheet-header,.window-content.starburst .mainName, .window-content.window-content.starburst .header.blue {
-    background-color: #000016 !important;
-   background: url('../assets/fond/fond_starburst.webp') #000016 !important;
-    background-blend-mode: screen !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-.window-content.window-content.starburst .header.blue input, .window-content.window-content.starburst .header.blue select{
- font-family: 'Big Noodle Titling', sans-serif;
-}
-/* Inputs and spans in header */
-.window-content.starburst .sheet-header input,
-.window-content.starburst .switchIdentite {
-    color: white !important;
-    background: midnightblue !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Hero and identite blocks */
-.window-content.starburst .hero,
-.window-content.starburst .identite {
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Generic spans */
-.window-content.starburst span {
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Header blocks */
-.window-content.starburst .sheet-header .block {
-    background: rgba(128, 128, 255, 0.5) !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Powers */
-.window-content.starburst div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
-.window-content.starburst div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
-    background: url('../assets/fond/fond_starburst.webp') #000016 !important;
-    background-blend-mode: screen !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Powers header text */
-.window-content.starburst div.pouvoirs div.lPouvoirs div.pwr span.header {
-    text-shadow: 2px 2px 0px #000016, 1px 1px 0px #363644 !important;
-    background-blend-mode: color-burn !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Tabs */
-.window-content.starburst section.sheet-body nav.tabs a {
-    color: white !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Rolls */
-.window-content.starburst div.caracteristiques div.inner a.roll {
-    background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
-    color: #FFFFFF !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Item create buttons */
-.window-content.starburst div.pouvoirs a.item-create {
-    background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
-    border-bottom-color: #666 !important;
-    color: #FFFFFF !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Resets and buttons */
-.window-content.starburst div.caracteristiques a.resetStrategie,
-.window-content.starburst div.options a.btnAbs,
-.window-content.starburst div.totalpp a.btnOC {
-    background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
-    color: #FFFFFF !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Selects */
-.window-content.starburst select {
-    background: rgba(0, 64, 0, 0.8) !important;
-}
-
-.window-content.starburst select option {
-  background: #000016 !important;
-  color: white !important;
-}
-
-.window-content.starburst div.pouvoirs div.lPouvoirs select.link {
-    color: #EBEBEB !important;
-    border-bottom: 1px solid #0000FF !important;
-    background: #000016 !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Textareas */
-.window-content.starburst textarea {
-    color: white !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Sheet body inputs */
-.window-content.starburst .sheet-body input {
-    background: #000016 !important;
-    color: white !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-}
-
-/* Expand/collapse powers */
-.window-content.starburst div.pouvoirs div.lPouvoirs div.pwr {
-    transition: background-color 0.3s, color 0.3s !important;
-}
-
-.window-content.starburst div.pouvoirs div.lPouvoirs div.pwr.expanded {
-    background-color: #000016 !important; /* midnight blue when expanded */
-    color: #FFFFFF !important;             /* white text */
-}
-.window-content.starburst a{
-    color: white !important;
-    font-family: 'Big Noodle Titling', sans-serif;
-
-}
-.window-content.starburst .btnOC a{
-  background-image: linear-gradient(180deg, midnightblue, #e6e6e6) !important;
+/* Tech Blue Theme */
+.window-content.techblue {
+    --font-family: 'Goldman', sans-serif;
+    --window-bg: url('../assets/theme/darkbluenoise.webp');
+    --header-bg: url('../assets/fond/fond_cubic.webp') #000080;
+    --header-blend: color-dodge;
+    --input-bg: navy;
+    --block-bg: rgba(0,0,128,0.5);
+    --power-bg: url('../assets/fond/fond_cubic.webp') #000080;
+    --power-text-shadow: 2px 2px 0px #0000FF, 1px 1px 0px #00008C;
+    --power-text-blend: screen;
 }

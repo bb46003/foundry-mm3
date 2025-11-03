@@ -56,8 +56,6 @@ import {
 import { MigrationMM3 } from "./migration.mjs";
 
 import { parseInput, } from "./parse_simple_character.mjs";
-
-import { JurnalThemeDialog } from "./helpers/jurnal-theme-dialog.mjs";
 //import cheerio from 'cheerio';
 /* -------------------------------------------- */
 /*  Init Hook                                   */

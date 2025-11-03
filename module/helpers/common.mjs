@@ -1906,7 +1906,7 @@ export async function accessibility(actor, html) {
   const element = html[0].offsetParent;
   const app = element?.querySelector(".window-content");
   if(app){
-    const className = "window-content";
+    const className = "window-content theme-base";
   if (theme && theme !== "default") {
         switch(theme){
       case "green":
@@ -1943,7 +1943,7 @@ export async function accessibility(actor, html) {
     
   }
   else{
-    app.className = className;  
+    app.className = "window-content";  
   }
 }
    

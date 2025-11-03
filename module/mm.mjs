@@ -1533,34 +1533,3 @@ Hooks.on("canvasInit", function () {
     SquareGrid.prototype.measureDistances = measureDistances;
   }
 });
-Hooks.on("renderJournalEntrySheet", (html) => {
-  let element;
-  let uuid;
-  if(game.release.generation < 13){
-    element = html[0];
-    uuid = html.document.uuid;
-  }
-  else{
-    element = html.element;
-    uuid = html.document.uuid;
-  }
-  console.log(element)
-  const header = element.querySelector(".window-header");
-  const title = header.querySelector("h1"); 
-  const btn = document.createElement("button");
-  btn.type = "button";
-  btn.classList.add("header-control", "icon", "fa-solid", "fa-palette");
-  btn.dataset.tooltip = game.i18n.localize("MM3.JURNAL.ThemeTooltip");
-  btn.ariaLabel =game.i18n.localize("MM3.JURNAL.ThemeTooltip");
-  title.insertAdjacentElement("afterend", btn);
-  btn.addEventListener("click", (ev) => {
-    ev.stopPropagation();
-    const data = {element : element, uuid: uuid}
-    const dialog = new JurnalThemeDialog(data);
-    dialog.render(true)
-  });
-  const flags = html.document?.flags?.MM3?.theme;
-  if(flags){
-    //apply theme
-  }
-})

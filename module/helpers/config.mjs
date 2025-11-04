@@ -398,6 +398,21 @@ MM3.sheetTheme = {
 };
 MM3.overleyType = {
     "default" : "MM3.THEME.default",
-    "screen" : "MM3.THEME.screen",
-    "overlay" : "MM3.THEME.overley"
+    "normal": "MM3.THEME.normal",
+    "multiply": "MM3.THEME.multiply",
+    "screen": "MM3.THEME.screen",
+    "overlay": "MM3.THEME.overlay",
+    "darken": "MM3.THEME.darken",
+    "lighten": "MM3.THEME.lighten",
+    "colorDodge": "MM3.THEME.colorDodge",
+    "colorBurn": "MM3.THEME.colorBurn",
+    "hardLight": "MM3.THEME.hardLight",
+    "softLight": "MM3.THEME.softLight",
+    "difference": "MM3.THEME.difference",
+    "exclusion": "MM3.THEME.exclusion",
+    "hue": "MM3.THEME.hue",
+    "saturation": "MM3.THEME.saturation",
+    "color": "MM3.THEME.color",
+    "luminosity": "MM3.THEME.luminosity"
+    
 }

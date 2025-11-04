@@ -1902,7 +1902,7 @@ export async function accessibility(actor, html) {
     target.prepend(`<i class="fa-solid fa-hexagon-check"></i>`);
   });
   const theme = actor?.system?.theme;
-  const overlaeyType = actor?.system?.overlayType;
+  const overlayType = actor?.system?.overlayType;
   const element = html[0].offsetParent;
   const app = element?.querySelector(".window-content");
   if(app){
@@ -1945,8 +1945,15 @@ export async function accessibility(actor, html) {
   else{
     app.className = "window-content";  
   }
-  if (overlaeyType !== "default") {
-    app.style.setProperty("--header-blend", overlaeyType);
+  if (overlayType !== "default" && theme !== "default") {
+    app.style.setProperty("--header-blend", overlayType);
+  } 
+  if (overlayType !== "default" && theme === "default") {
+    const header = app.querySelector(".sheet-header")
+    header.style.backgroundBlendMode = `${overlayType}, multiply, multiply`
+  }
+  if (overlayType === "default" && theme !== "default") {
+    app.style.removeProperty("--header-blend");
   } 
   
 }
@@ -1956,12 +1963,13 @@ export function itemTheme(html){
   const actor = game.user.character;
   if(actor){
   const theme = actor?.system?.theme;
+  const overlayType = actor?.system?.overlayType;
   const element = html.element[0];
   const app = element?.querySelector(".window-content");
-  if(app){
-    const className = "window-content";
+if(app){
+    const className = "window-content theme-base";
   if (theme && theme !== "default") {
-    switch(theme){
+        switch(theme){
       case "green":
         app.className = className + " green";
         break
@@ -1992,13 +2000,25 @@ export function itemTheme(html){
       case "matrixblack":
         app.className = className + " matrixblack";
         break
-    }    
+    } 
+    
   }
   else{
-    app.className = className + "";
+    app.className = "window-content";  
   }
+  if (overlayType !== "default" && theme !== "default") {
+    app.style.setProperty("--header-blend", overlayType);
+  } 
+  if (overlayType !== "default" && theme === "default") {
+    const header = app.querySelector(".sheet-header")
+    header.style.backgroundBlendMode = `${overlayType}, multiply, multiply`
+  }
+  if (overlayType === "default" && theme !== "default") {
+    app.style.removeProperty("--header-blend");
+  } 
+  
 }
-}
+  }
 
 }
 export async function deletePrompt(actor, label) {

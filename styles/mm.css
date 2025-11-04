@@ -10611,6 +10611,9 @@ section#compendium > header:first-of-type:before {
 
     /* Sheet header */
 }
+.window-content.theme-base .sheet-body{
+  background-color: var(--window-bg-color);
+}
 .window-content.theme-base .sheet-header,
 .window-content.theme-base .mainName,
 .window-content.theme-base .header.blue {
@@ -10637,8 +10640,13 @@ section#compendium > header:first-of-type:before {
 /* Hero and identite blocks */
 .window-content.theme-base .hero,
 .window-content.theme-base .identite,
-.window-content.theme-base span {
+.window-content.theme-base span,
+.window-content.theme-base .competence-h4 h4 {
     font-family: var(--font-family, sans-serif) !important;
+}
+.window-content.theme-base select{
+   font-family: var(--font-family, sans-serif) !important;
+   color: var(--text-color, white) !important;
 }
 
 /* Header blocks */
@@ -10649,17 +10657,37 @@ section#compendium > header:first-of-type:before {
 
 /* Powers */
 .window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr.blue div.pwrheader,
-.window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader {
+.window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr.blue::after,
+.window-content.theme-base section.header.blue,
+.window-content.theme-base section.header.blue input{
     background: var(--power-bg, none) !important;
     font-family: var(--font-family, sans-serif) !important;
+    background-blend-mode: var(--header-blend, unset) !important;
 }
-
+.window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr.red div.pwrheader,
+.window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr.red::after,
+.window-content.theme-base section.header.red,
+.window-content.theme-base section.header.red input {
+    background: var(--power-bg-red, none)  !important;
+    font-family: var(--font-family, sans-serif) !important;
+    background-blend-mode: var(--header-blend, unset) !important;
+}
+.window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr.violet div.pwrheader,
+.window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr.violet::after,
+.window-content.theme-base section.header.violet,
+.window-content.theme-base section.header.violet input {
+    background: var(--power-bg-violet, none) !important;
+    font-family: var(--font-family, sans-serif) !important;
+    background-blend-mode: var(--header-blend, unset) !important;
+}
+.window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr.blue::after
 /* Powers header text */
 .window-content.theme-base div.pouvoirs div.lPouvoirs div.pwr span.header {
     text-shadow: var(--power-text-shadow, 2px 2px 0px #222, 1px 1px 0px #363636) !important;
     background-blend-mode: var(--power-text-blend, screen) !important;
     font-family: var(--font-family, sans-serif) !important;
 }
+
 
 /* Tabs */
 .window-content.theme-base section.sheet-body nav.tabs a {
@@ -10702,7 +10730,8 @@ section#compendium > header:first-of-type:before {
 /* Textareas */
 .window-content.theme-base textarea,
 .window-content.theme-base .sheet-body input,
-.window-content.theme-base .editor-content {
+.window-content.theme-base .editor-content,
+.window-content.theme-base div.editor {
     color: var(--text-color, white) !important;
     background: var(--input-bg, black) !important;
     font-family: var(--font-family, sans-serif) !important;
@@ -10739,6 +10768,8 @@ section#compendium > header:first-of-type:before {
     --input-bg: black;
     --block-bg: rgba(64,64,64,0.5);
     --power-bg: url('../assets/fond/fond_skulls.webp') #000000;
+    --power-bg-red: url('../assets/fond/fond_skulls.webp') #800000;
+    --power-bg-violet: url('../assets/fond/fond_skulls.webp') #483248;
     --power-text-shadow: 2px 2px 0px #222, 1px 1px 0px #363636;
     --power-text-blend: screen;
 }
@@ -10753,6 +10784,8 @@ section#compendium > header:first-of-type:before {
     --input-bg: maroon;
     --block-bg: rgba(128,0,0,0.5);
     --power-bg: url('../assets/fond/fond_drip.webp') #8B0000;
+    --power-bg-red: url('../assets/fond/fond_drip.webp') #DA3A2F;
+    --power-bg-violet: url('../assets/fond/fond_drip.webp') #7E627F;
     --power-text-shadow: 2px 2px 0px #8B0000, 1px 1px 0px #FF0000;
 }
 
@@ -10765,6 +10798,8 @@ section#compendium > header:first-of-type:before {
     --input-bg: maroon;
     --block-bg: rgba(128,0,0,0.5);
     --power-bg: url('../assets/fond/fond_drip.webp') #8B0000;
+    --power-bg-red: url('../assets/fond/fond_drip.webp') #8B0000;
+    --power-bg-violet: url('../assets/fond/fond_drip.webp') #B22222;
     --power-text-shadow: 2px 2px 0px #8B0000, 1px 1px 0px #FF0000;
 }
 
@@ -10776,7 +10811,9 @@ section#compendium > header:first-of-type:before {
     --header-blend: overlay;
     --input-bg: darkgreen;
     --block-bg: rgba(128,255,128,0.5);
-    --power-bg: url('../assets/fond/fond_silverstorm.webp') #003200;
+    --power-bg: url('../assets/fond/fond_silverstorm.webp') #006742;
+    --power-bg-red: url('../assets/fond/fond_silverstorm.webp') #228B22;
+    --power-bg-violet: url('../assets/fond/fond_silverstorm.webp') #4CBB17;
     --power-text-shadow: 2px 2px 0px #006400, 1px 1px 0px #364438;
     --power-text-blend: color-burn;
     --expanded-bg: #004400;
@@ -10792,6 +10829,8 @@ section#compendium > header:first-of-type:before {
     --input-bg: darkblue;
     --block-bg: rgba(128,128,255,0.5);
     --power-bg: url('../assets/fond/fond_starsstagger.webp') #0A3161;
+    --power-bg-red: url('../assets/fond/fond_starsstagger.webp') #B31942;
+    --power-bg-violet: url('../assets/fond/fond_starsstagger.webp') #5F2552;
     --power-text-shadow: 2px 2px 0px #000064, 1px 1px 0px #363644;
     --power-text-blend: color-burn;
 }
@@ -10804,7 +10843,9 @@ section#compendium > header:first-of-type:before {
     --header-blend: overlay;
     --input-bg: navy;
     --block-bg: rgba(0,0,128,0.5);
-    --power-bg: url('../assets/fond/fond_molecular.webp') #000080;
+    --power-bg: url('../assets/fond/fond_molecular.webp') #4169E1;
+    --power-bg-red: url('../assets/fond/fond_molecular.webp') #4682B4;
+    --power-bg-violet: url('../assets/fond/fond_molecular.webp') #6F8FAF;
     --power-text-shadow: 2px 2px 0px #0000FF, 1px 1px 0px #00008C;
     --power-text-blend: screen;
 }
@@ -10817,7 +10858,9 @@ section#compendium > header:first-of-type:before {
     --header-blend: overlay;
     --input-bg: navy;
     --block-bg: rgba(0,0,128,0.5);
-    --power-bg: url('../assets/fond/fond_cubic.webp') #000080;
+    --power-bg: url('../assets/fond/fond_cubic.webp') #4169E1;
+    --power-bg-red: url('../assets/fond/fond_cubic.webp') #4682B4;
+    --power-bg-violet: url('../assets/fond/fond_cubic.webp') #6F8FAF;
     --power-text-shadow: 2px 2px 0px #0000FF, 1px 1px 0px #00008C;
     --power-text-blend: screen;
 }
@@ -10830,11 +10873,12 @@ section#compendium > header:first-of-type:before {
   --header-blend: screen;
   --input-bg: midnightblue;
   --input-text: #FFFFFF;
-  /*--select-bg: rgba(128, 128, 255, 0.5)*/
   --select-option-bg: #000016;
   --select-option-text: #FFFFFF;
   --block-bg: rgba(128, 128, 255, 0.5);
-  --power-bg: url('../assets/fond/fond_cosmic1.webp') #000016;
+  --power-bg: url('../assets/fond/fond_cosmic1.webp') #000080;
+  --power-bg-red: url('../assets/fond/fond_cosmic1.webp') #00008B;
+  --power-bg-violet: url('../assets/fond/fond_cosmic1.webp') #191970;
   --power-blend: screen;
   --power-text-shadow: 2px 2px 0px #000016, 1px 1px 0px #363644;
   --button-gradient: linear-gradient(180deg, midnightblue, #e6e6e6);
@@ -10853,6 +10897,21 @@ section#compendium > header:first-of-type:before {
     --header-blend: screen;
     --input-bg: midnightblue;
     --block-bg: rgba(128, 128, 255, 0.5);
-    --power-bg: url('../assets/fond/fond_starburst.webp') #000016;
+    --power-bg: url('../assets/fond/fond_starburst.webp') #000080;
+    --power-bg-red: url('../assets/fond/fond_starburst.webp') #00008B;
+    --power-bg-violet: url('../assets/fond/fond_starburst.webp') #191970;
+    --power-text-shadow: 2px 2px 0px #000016, 1px 1px 0px #363644;
+}
+.window-content.matrixblack {
+    --font-family: 'Big Noodle Titling', sans-serif;
+    --window-bg: url('../assets/theme/blackmatrix.webp');
+    --header-bg: url('../assets/fond/fond_matrix.webp');
+    --window-bg-color: #000000ad;
+    --header-blend: screen;
+    --input-bg: #2C5F34;
+    --block-bg: #2c5f3475;
+    --power-bg: url('../assets/fond/fond_matrix.webpp') #000000;
+    --power-bg-red: url('../assets/fond/fond_matrix.webp') #013220;
+    --power-bg-violet: url('../assets/fond/fond_matrix.webp') #2C5F34;
     --power-text-shadow: 2px 2px 0px #000016, 1px 1px 0px #363644;
 }
